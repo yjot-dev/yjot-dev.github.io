@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi portafolio | Yasser Ortiz J.</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header class="header">
+    <nav class="navbar">
+      <div class="logo">
+        <img src="assets/header-footer/logo.jpg" alt="Logo">
+        <span>Mi portafolio</span>
+      </div>
+
+      <ul class="nav-links">
+        <li><a href="privacidad.html">Política de privacidad</a></li>
+        <li class="dropdown">
+          <a href="#">Acerca de mí ▾</a>
+          <ul class="dropdown-menu">
+            <li><a href="index.html">Mi currículo</a></li>
+            <li><a href="proyectos.html">Mis proyectos</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="portada">
+      <img src="assets/header-footer/portada.jpg" alt="Imagen de portada">
+    </div>
+  </header>
+
+  <h2 class="titulo">ACERCA DE MÍ</h2>
+  <p class="subtitulo">Hoja de vida</p>
+  <section class="contenedor">
+    <div class="perfil">
+      <img class="foto-perfil" src="assets/acerca-de-mi/foto-yasser.jpg" alt="Foto de Yasser Ortiz T.">
+      <p>
+        Bienvenidos, mi nombre es Yasser Ortiz T. Soy ingeniero de sistemas, graduado en la Universidad Técnica de
+        Machala.
+        Al iniciar mi carrera empecé a desarrollar programas de escritorio utilizando Java, más adelante aprendí a
+        realizar conexiones con bases de datos relacionales usando MySQL y PostgreSQL, posteriormente desarrolle
+        programas con C# y fue hay que me interesó el desarrollo de aplicaciones móviles, inicie programando en Xamarin
+        con Visual Studios y actualmente estoy codificando en Android con Android Studios.
+      </p>
+    </div>
+  </section>
+
+  <section class="contenedor">
+    <div class="tabla-1">
+      <div class="item-de-tabla">
+        <a class="icono clickable" href="assets/acerca-de-mi/cv-yjot-dev.pdf" target="_blank">CV</a>
+        <span>Desarrollador Android</span>
+      </div>
+      <div class="item-de-tabla">
+        <div class="icono">3+</div>
+        <span>Años de experiencia</span> 
+      </div>
+      <div class="item-de-tabla">
+        <div class="icono">10+</div>
+        <span>Proyectos realizados</span>
+      </div>
+    </div>
+  </section>
+
+  <p class="subtitulo">Mis mejores proyectos</p>
+  <section class="contenedor">
+    <div class="tabla-2">
+      <div class="proyecto">
+        <a href="https://github.com/yjot-dev/Rep-PlayerMusic/tree/v5-test" target="_blank">
+          <img class="proyectos-1-img" src="assets/mis-proyectos/Android6.jpg" alt="Reproductor de música">
+        </a>
+        <h3>Reproductor de música</h3>
+        <ul>
+          <li><strong>Patrón de diseño arquitectónico:</strong> MVVM + Hexagonal</li>
+          <li><strong>Base de datos:</strong> Room (Local)</li>
+          <li><strong>Inyección de dependencias:</strong> Hilt</li>
+          <li><strong>Descripción:</strong> Esta app es un reproductor de música local, obtiene la música guardada de la
+            memoria interna y SD del dispositivo, ofrece la opción de agregar y eliminar música de una playlist, así
+            como crear o quitar una playlist, puede reproducir música en aleatorio, o en secuencia, así como repetir la
+            misma música o una única vez.</li>
+        </ul>
+      </div>
+
+      <div class="proyecto">
+        <a href="https://github.com/yjot-dev/Rep-EMP/tree/v3-test" target="_blank">
+          <img class="proyectos-1-img" src="assets/mis-proyectos/Android7.jpg" alt="Gamificación sobre emprendimiento">
+        </a>
+        <h3>Gamificación sobre emprendimiento</h3>
+        <ul>
+          <li><strong>Patrón de diseño arquitectónico:</strong> MVVM + Hexagonal</li>
+          <li><strong>Base de datos:</strong> MySQL</li>
+          <li><strong>API:</strong> Node</li>
+          <li><strong>Soporta:</strong> HTTPS</li>
+          <li><strong>Inyección de dependencias:</strong> Hilt</li>
+          <li><strong>Descripción:</strong> Esta app está orientada a la educación, cuenta con varios ejercicios sobre
+            la temática de emprendimiento, tiene cuatro modelos de actividades: Verdadero y falso, Elegir respuesta
+            correcta, Escribir respuesta correcta y Lectura comprensiva. Los ejercicios fueron creados según la
+            estrategia de enseñanza y aprendizaje: Gamificación.</li>
+        </ul>
+      </div>
+
+      <div class="proyecto">
+        <a href="https://github.com/yjot-dev/Rep-AccidentReporter/tree/v2-test" target="_blank">
+          <img class="proyectos-1-img" src="assets/mis-proyectos/Android8.jpg" alt="Reportero de incidentes">
+        </a>
+        <h3>Reportero de incidentes</h3>
+        <ul>
+          <li><strong>Patrón de diseño arquitectónico:</strong> MVVM + Hexagonal</li>
+          <li><strong>Base de datos:</strong> MySQL</li>
+          <li><strong>API:</strong> Node + Google Maps</li>
+          <li><strong>Soporta:</strong> HTTPS</li>
+          <li><strong>Inyección de dependencias:</strong> Hilt</li>
+          <li><strong>Descripción:</strong> Esta app le permite al usuario elegir una ubicación en el mapa para reportar
+            algún incidente, luego de elegir una ubicación se mostrara un formulario donde debe elegir el tipo de
+            incidente y describir el incidente, luego la app obtiene la fecha actual en su dispositivo y guarda el
+            reporte en una base de datos.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="ver-todos">
+      <a href="proyectos.html" class="btn-proyectos clickable">VER TODOS LOS PROYECTOS</a>
+    </div>
+  </section>
+
+  <p class="subtitulo">Conocimientos técnicos</p>
+  <section class="contenedor">
+    <div class="tabla-1">
+      <div class="item-de-tabla">
+        <img src="assets/acerca-de-mi/kotlin.jpg" alt="Kotlin">
+        <span>Kotlin</span>
+      </div>
+      <div class="item-de-tabla">
+        <img src="assets/acerca-de-mi/jetpack-compose.jpg" alt="Jetpack Compose">
+        <span>Jetpack Compose</span>
+      </div>
+      <div class="item-de-tabla">
+        <img src="assets/acerca-de-mi/xml.jpg" alt="XML">
+        <span>XML</span>
+      </div>
+      <div class="item-de-tabla">
+        <img src="assets/acerca-de-mi/mysql.jpg" alt="MySQL">
+        <span>MySQL</span>
+      </div>
+      <div class="item-de-tabla">
+        <img src="assets/acerca-de-mi/nodejs.jpg" alt="Node">
+        <span>Node</span>
+      </div>
+    </div>
+  </section>
+
+  <p class="subtitulo">Herramientas de desarrollo</p>
+  <section class="contenedor">
+    <div class="tabla-1">
+      <div class="item-de-tabla">
+        <img src="assets/acerca-de-mi/lucid.jpg" alt="Lucid">
+        <span>Lucid</span>
+      </div>
+      <div class="item-de-tabla">
+        <img src="assets/acerca-de-mi/android-studios.jpg" alt="Android Studio">
+        <span>Android Studio</span>
+      </div>
+      <div class="item-de-tabla">
+        <img src="assets/acerca-de-mi/visual-studio-code.jpg" alt="Visual Studio Code">
+        <span>VS Code</span>
+      </div>
+      <div class="item-de-tabla">
+        <img src="assets/acerca-de-mi/mysql-workbench.jpg" alt="MySQL Workbench">
+        <span>MySQL Workbench</span>
+      </div>
+      <div class="item-de-tabla">
+        <img src="assets/acerca-de-mi/github.jpg" alt="GitHub">
+        <span>GitHub</span>
+      </div>
+    </div>
+  </section>
+
+  <p class="subtitulo">Habilidades blandas</p>
+  <section class="contenedor">
+    <div class="tabla-1">
+      <div class="item-de-tabla">
+        <svg viewBox="0 0 36 36">
+          <path class="circle-bg" d="M18 2.0845 a 15.9155 15.9155 0 1 1 0 31.831 a 15.9155 15.9155 0 1 1 0 -31.831" />
+          <path class="circle" stroke-dasharray="90, 10"
+            d="M18 2.0845 a 15.9155 15.9155 0 1 1 0 31.831 a 15.9155 15.9155 0 1 1 0 -31.831" />
+          <text x="18" y="20.35" class="percentage">90%</text>
+        </svg>
+        <span>Adaptabilidad</span>
+      </div>
+
+      <div class="item-de-tabla">
+        <svg viewBox="0 0 36 36">
+          <path class="circle-bg" d="M18 2.0845 a 15.9155 15.9155 0 1 1 0 31.831 a 15.9155 15.9155 0 1 1 0 -31.831" />
+          <path class="circle" stroke-dasharray="85, 15"
+            d="M18 2.0845 a 15.9155 15.9155 0 1 1 0 31.831 a 15.9155 15.9155 0 1 1 0 -31.831" />
+          <text x="18" y="20.35" class="percentage">85%</text>
+        </svg>
+        <span>Capacidad resolutiva</span>
+      </div>
+
+      <div class="item-de-tabla">
+        <svg viewBox="0 0 36 36">
+          <path class="circle-bg" d="M18 2.0845 a 15.9155 15.9155 0 1 1 0 31.831 a 15.9155 15.9155 0 1 1 0 -31.831" />
+          <path class="circle" stroke-dasharray="92, 8"
+            d="M18 2.0845 a 15.9155 15.9155 0 1 1 0 31.831 a 15.9155 15.9155 0 1 1 0 -31.831" />
+          <text x="18" y="20.35" class="percentage">92%</text>
+        </svg>
+        <span>Proactividad</span>
+      </div>
+
+      <div class="item-de-tabla">
+        <svg viewBox="0 0 36 36">
+          <path class="circle-bg" d="M18 2.0845 a 15.9155 15.9155 0 1 1 0 31.831 a 15.9155 15.9155 0 1 1 0 -31.831" />
+          <path class="circle" stroke-dasharray="92, 8"
+            d="M18 2.0845 a 15.9155 15.9155 0 1 1 0 31.831 a 15.9155 15.9155 0 1 1 0 -31.831" />
+          <text x="18" y="20.35" class="percentage">92%</text>
+        </svg>
+        <span>Comunicación</span>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <h2>MI CONTACTO</h2>
+    <p>Puedes contactarme en LinkedIn y Gmail, además puedes consultar mis proyectos realizados en GitHub.</p>
+    <div class="footer-icons">
+      <a href="mailto:2010guabo@gmail.com" aria-label="Correo">
+        <img src="assets/header-footer/email.png" alt="Email">
+      </a>
+      <a href="https://ec.linkedin.com/in/yjot-dev" target="_blank" aria-label="LinkedIn">
+        <img src="assets/header-footer/linkedin.png" alt="LinkedIn">
+      </a>
+      <a href="https://github.com/yjot-dev" target="_blank" aria-label="GitHub">
+        <img src="assets/header-footer/github.png" alt="GitHub">
+      </a>
+    </div>
+  </footer>
+</body>
+
+</html>

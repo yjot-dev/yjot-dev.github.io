@@ -1,0 +1,479 @@
+/* Limpieza general del navegador */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* Escala de tamaño de textos */
+html {
+  font-size: 18px;
+}
+
+/* Diseño responsive */
+@media (max-width: 509px) {
+  /* Menu desplegable pantallas pequeñas */
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0rem;
+  }
+  
+  .logo {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .logo img {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
+  .logo span {
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    width: 100%;
+    gap: 0;
+  }
+
+  .nav-links li {
+    width: 100%;
+  }
+
+  .nav-links a {
+    display: block;
+    width: 100%;
+    padding: 0.2rem 0.75rem;
+    font-size: 0.7rem;
+  }
+
+  .dropdown-menu {
+    position: static;
+    top: 0;
+    left: 0;
+    margin-top: -0.8rem;
+    background-color: black;
+    width: 100%;
+    padding: 0;
+    z-index: 10;
+  }
+
+  .dropdown-menu li a {
+    padding: 0.2rem 0.75rem;
+    font-size: 0.7rem;
+  }
+
+  .portada img {
+    padding-top: 4rem;
+  }
+}
+
+/* Encabezado */
+.header {
+  position: relative;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  z-index: 1000;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.logo img {
+  width: 2rem;
+  height: 2rem;
+}
+
+.logo span {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.nav-links a {
+  font-size: clamp(0.8rem, 2vw, 1rem);
+  position: relative;
+  padding: 1rem;
+  color: white;
+  text-decoration: none;
+}
+
+.nav-links a:hover {
+  background-color: #494949;
+}
+
+/* Menu desplegable pantallas grandes */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 160%;
+  right: 0;
+  background-color: black;
+  list-style: none;
+  padding: 0.5rem 0rem;
+  min-width: 10rem;
+}
+
+.dropdown-menu li a {
+  display: block;
+  font-size: clamp(0.8rem, 2vw, 1rem);
+  padding: 0.5rem 1rem;
+  color: white;
+  text-decoration: none;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+/* Imagen de portada */
+.portada img {
+  width: 100%;
+  height: auto;
+}
+
+/* Titulos del sitio web */
+.titulo {
+  text-align: center;
+  font-size: clamp(1.5rem, 2vw, 2.5rem);
+  color: white;
+  background-color: #00aaff;
+  padding: 1rem;
+}
+
+/* Subtitulos del sitio web */
+.subtitulo {
+  text-align: center;
+  font-size: clamp(1.3rem, 2vw, 2.3rem);
+  color: black;
+  background-color: #eaf5fa;
+  padding: 1rem;
+}
+
+.contenedor {
+  padding: 1rem 1.5rem;
+  /* Espaciado lateral moderado */
+  max-width: 50rem;
+  /* Limita el ancho en pantallas grandes */
+  margin: 0 auto;
+  /* Texto centralizado */
+  text-align: center;
+}
+
+/* Pagina index (Mi curriculo) */
+.perfil {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.perfil p {
+  flex: 1;
+  font-size: 1rem;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+.foto-perfil {
+  width: 100%;
+  height: auto;
+  max-width: 14rem;
+  margin: 0 auto;
+  object-fit: contain;
+  border-radius: 1.5rem;
+}
+
+.tabla-1 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(6rem, 1fr));
+  gap: 2rem;
+  justify-items: center;
+}
+
+.item-de-tabla {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s ease;
+}
+
+.item-de-tabla img, .item-de-tabla svg {
+  padding: 0.4rem;
+  width: 8rem;
+  height: 8rem;
+  object-fit: contain;
+  margin-bottom: 0.5rem;
+}
+
+.item-de-tabla span {
+  font-size: 1rem;
+  color: #555;
+}
+
+.item-de-tabla:hover {
+  transform: scale(1.05);
+}
+
+.icono {
+  background-color: #00aaff;
+  color: white;
+  font-size: 2.5rem;
+  font-weight: bold;
+  border-radius: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  border: 0.2rem solid #9c9c9c;
+  padding: 0.4rem;
+  width: 7rem;
+  height: 7rem;
+  object-fit: contain;
+  margin-bottom: 0.5rem;
+}
+
+.icono.clickable:active {
+  background-color: #048bcf;
+}
+
+.icono.clickable {
+  cursor: pointer;
+  transition: background-color 0.30s ease;
+}
+
+.tabla-2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+  gap: 2rem;
+  justify-items: center;
+}
+
+.proyectos-1-img {
+  padding: 0.2rem;
+  width: 100%;
+  height: auto;
+  max-width: 24rem;
+  margin: 0 auto;
+  object-fit: contain;
+}
+
+.ver-todos {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.btn-proyectos {
+  padding: 1rem 1.5rem;
+  background-color: #00aaff;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  border: 0.2rem solid #9c9c9c;
+}
+
+.btn-proyectos:hover {
+  transform: scale(1.05);
+}
+
+.btn-proyectos.clickable:active {
+  background-color: #048bcf;
+}
+
+.btn-proyectos.clickable {
+  cursor: pointer;
+  transition: background-color 0.30s ease;
+}
+
+/* Graficos de habilidades */
+.circle-bg {
+  fill: none;
+  stroke: #eee;
+  stroke-width: 3.8;
+}
+
+.circle {
+  fill: none;
+  stroke: #00aaff;
+  stroke-width: 3.8;
+  stroke-linecap: round;
+  transition: stroke-dasharray 0.6s ease;
+}
+
+.percentage {
+  font-size: 0.6rem;
+  text-anchor: middle;
+  fill: #333;
+}
+
+/* Pagina privacidad (Politica de privacidad) */
+.aviso {
+  padding: 1rem 0rem;
+  width: 100%;
+  background-color: #eaf5fa;
+}
+
+.aviso p {
+  padding: 0rem 1.5rem;
+  /* Espaciado lateral moderado */
+  max-width: 50rem;
+  /* Limita el ancho en pantallas grandes */
+  margin: 0 auto;
+  /* Centra horizontalmente */
+  text-align: justify;
+  line-height: 1.5;
+}
+
+.privacidad {
+  padding-left: 1.5rem;
+  /* Espaciado lateral moderado */
+  padding-right: 1.5rem;
+  /* Espaciado lateral moderado */
+  padding-bottom: 1rem;
+  /* Espaciado lateral moderado */
+  max-width: 50rem;
+  /* Limita el ancho en pantallas grandes */
+  margin: 0 auto;
+}
+
+.privacidad h3 {
+  margin-top: 1.5rem;
+  font-size: 1.2rem;
+}
+
+.privacidad p {
+  margin-bottom: 1rem;
+}
+
+.privacidad ul {
+  list-style: disc;
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.privacidad .p .li {
+  line-height: 1.5;
+  text-align: justify;
+}
+
+/* Pagina proyectos (Mis proyectos) */
+.tabla-3 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  gap: 2rem;
+  justify-items: center;
+}
+
+.proyecto {
+  background-color: #f1efef;
+  padding: 1rem;
+  border-radius: 1.5rem;
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.05);
+  text-align: left;
+}
+
+.proyecto h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.proyecto ul {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 1rem;
+}
+
+.proyecto li {
+  font-size: 0.95rem;
+  margin-bottom: 0.3rem;
+  color: #444;
+  text-align: justify;
+}
+
+.proyectos-2-img {
+  padding: 0.2rem;
+  width: 100%;
+  height: auto;
+  max-width: 30rem;
+  margin: 0 auto;
+  object-fit: contain;
+}
+
+/* Pie de pagina */
+.footer {
+  background-color: #00aaff;
+  color: white;
+  text-align: center;
+  padding: 2rem 0rem;
+  font-family: 'Arial', sans-serif;
+}
+
+.footer h2 {
+  font-size: clamp(1.5rem, 2vw, 2.5rem);
+  margin-bottom: 0.5rem;
+}
+
+.footer p {
+  font-size: clamp(0.8rem, 2vw, 1rem);
+  max-width: 36rem;
+  margin: 0 auto 1.5rem;
+  line-height: 1.5;
+}
+
+.footer-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.footer-icons a img {
+  width: 3rem;
+  height: 3rem;
+  transition: transform 0.3s ease;
+}
+
+.footer-icons a:hover img {
+  transform: scale(1.1);
+}
