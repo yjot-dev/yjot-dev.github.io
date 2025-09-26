@@ -133,6 +133,14 @@ html {
   background-color: #494949;
 }
 
+/* Ocultar traductor original de Google */
+.goog-te-banner-frame.skiptranslate,
+.goog-te-gadget-icon,
+.goog-logo-link,
+.goog-te-gadget span {
+  display: none !important;
+}
+
 /* Menu desplegable pantallas grandes */
 .dropdown {
   position: relative;
@@ -278,22 +286,6 @@ html {
   transition: background-color 0.30s ease;
 }
 
-.tabla-2 {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
-  gap: 2rem;
-  justify-items: center;
-}
-
-.proyectos-1-img {
-  padding: 0.2rem;
-  width: 100%;
-  height: auto;
-  max-width: 24rem;
-  margin: 0 auto;
-  object-fit: contain;
-}
-
 .ver-todos {
   text-align: center;
   margin-top: 2rem;
@@ -398,7 +390,7 @@ html {
 }
 
 /* Pagina proyectos (Mis proyectos) */
-.tabla-3 {
+.tabla-2 {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
   gap: 2rem;
@@ -410,13 +402,13 @@ html {
   padding: 1rem;
   border-radius: 1.5rem;
   box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.05);
-  text-align: left;
 }
 
 .proyecto h3 {
   font-size: 1.2rem;
   margin-bottom: 0.5rem;
   color: #333;
+  text-align: center;
 }
 
 .proyecto ul {
@@ -432,7 +424,7 @@ html {
   text-align: justify;
 }
 
-.proyectos-2-img {
+.proyectos-img {
   padding: 0.2rem;
   width: 100%;
   height: auto;

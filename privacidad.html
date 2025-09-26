@@ -26,6 +26,13 @@
             <li><a href="proyectos.html">Mis proyectos</a></li>
           </ul>
         </li>
+        <li class="dropdown">
+          <a href="#">Idioma ▾</a>
+          <ul class="dropdown-menu">
+            <li onclick="doGTranslate('es|es')"><a href="#">Español</a></li>
+            <li onclick="doGTranslate('es|en')"><a href="#">Ingles</a></li>
+          </ul>
+        </li>
       </ul>
     </nav>
 
@@ -33,6 +40,8 @@
       <img src="assets/header-footer/portada.png" alt="Imagen de portada">
     </div>
   </header>
+
+  <div id="traductor" style="display:none;"></div>
 
   <h2 class="titulo">POLÍTICA DE PRIVACIDAD</h2>
   <section class="aviso">
@@ -101,6 +110,9 @@
       </a>
     </div>
   </footer>
+
+  <script type="text/javascript" src="logic.js"></script>
+  <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
 
 </html>
