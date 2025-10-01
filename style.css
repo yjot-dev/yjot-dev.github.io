@@ -141,6 +141,19 @@ html {
   display: none !important;
 }
 
+/* Item de idioma */
+.idioma {
+  display: flex;
+  align-items: center;
+  gap: 8px; /* espacio entre icono y texto */
+}
+
+.idioma img {
+  width: 20px;
+  height: auto;
+  border-radius: 3px; /* opcional, suaviza bordes */
+}
+
 /* Menu desplegable pantallas grandes */
 .submenu {
   position: relative;
@@ -149,7 +162,7 @@ html {
 .submenu-item {
   display: none;
   position: absolute;
-  top: 160%;
+  top: 150%;
   right: 0;
   background-color: black;
   list-style: none;
@@ -340,53 +353,26 @@ html {
 }
 
 /* Pagina privacidad (Politica de privacidad) */
-.aviso {
-  padding: 1rem 0rem;
-  width: 100%;
-  background-color: #eaf5fa;
-}
-
-.aviso p {
-  padding: 0rem 1.5rem;
-  /* Espaciado lateral moderado */
-  max-width: 50rem;
-  /* Limita el ancho en pantallas grandes */
-  margin: 0 auto;
-  /* Centra horizontalmente */
-  text-align: justify;
-  line-height: 1.5;
-}
-
 .privacidad {
-  padding-left: 1.5rem;
-  /* Espaciado lateral moderado */
-  padding-right: 1.5rem;
-  /* Espaciado lateral moderado */
-  padding-bottom: 1rem;
-  /* Espaciado lateral moderado */
+  padding: 0rem 1.5rem;
   max-width: 50rem;
   /* Limita el ancho en pantallas grandes */
   margin: 0 auto;
 }
 
-.privacidad h3 {
-  margin-top: 1.5rem;
-  font-size: 1.2rem;
-}
-
-.privacidad p {
-  margin-bottom: 1rem;
+.privacidad h3, p, li {
+  line-height: 1.5;
+  text-align: justify;
+  padding: 0;
 }
 
 .privacidad ul {
   list-style: disc;
   padding-left: 1.5rem;
-  margin-bottom: 1rem;
 }
 
-.privacidad .p .li {
-  line-height: 1.5;
-  text-align: justify;
+.parrafo {
+  padding-bottom: 1.5rem;
 }
 
 /* Pagina proyectos (Mis proyectos) */
@@ -437,21 +423,22 @@ html {
 .footer {
   background-color: #00aaff;
   color: white;
-  text-align: center;
-  padding: 2rem 0rem;
+  padding: 2rem 1.5rem;
   font-family: 'Arial', sans-serif;
+  text-align: center;
+  line-height: 1.5;
 }
 
 .footer h2 {
   font-size: clamp(1.5rem, 2vw, 2.5rem);
-  margin-bottom: 0.5rem;
+  max-width: 50rem;
+  margin: 0 auto;
 }
 
 .footer p {
   font-size: clamp(0.8rem, 2vw, 1rem);
-  max-width: 36rem;
-  margin: 0 auto 1.5rem;
-  line-height: 1.5;
+  max-width: 50rem;
+  margin: 0 auto;
 }
 
 .footer-icons {

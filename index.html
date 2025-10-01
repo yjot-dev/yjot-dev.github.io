@@ -29,8 +29,22 @@
         <li class="submenu">
           <a href="#">Idioma ▾</a>
           <ul class="submenu-item">
-            <li onclick="doGTranslate('es|es')"><a href="#">Español</a></li>
-            <li onclick="doGTranslate('es|en')"><a href="#">Ingles</a></li>
+            <li onclick="doGTranslate('es|es')">
+              <a href="#">
+                <div class="idioma">
+                  <img src="https://flagcdn.com/48x36/es.png" alt="Bandera de España">
+                  <span>Español</span>
+                </div>
+              </a>
+            </li>
+            <li onclick="doGTranslate('es|en')">
+              <a href="#">
+                <div class="idioma">
+                  <img src="https://flagcdn.com/48x36/gb.png" alt="Bandera de Inglaterra">
+                  <span>Ingles</span>
+                </div>
+              </a>
+            </li>
           </ul>
         </li>
       </ul>
@@ -43,180 +57,197 @@
 
   <div id="traductor" style="display:none;"></div>
 
-  <h2 class="titulo">ACERCA DE MÍ</h2>
-  <p class="subtitulo">Hoja de vida</p>
-  <section class="contenedor">
-    <div class="perfil">
-      <img class="foto-perfil" src="assets/curriculo/perfil.jpg" alt="Foto de Yasser Ortiz T.">
-      <p>
-        Bienvenidos, mi nombre es Yasser Ortiz T. Soy ingeniero de sistemas, graduado en la Universidad Técnica de
-        Machala.
-        Al iniciar mi carrera empecé a desarrollar programas de escritorio utilizando Java, más adelante aprendí a
-        realizar conexiones con bases de datos relacionales usando MySQL y PostgreSQL, posteriormente desarrolle
-        programas con C# y fue hay que me interesó el desarrollo de aplicaciones móviles, inicie programando en Xamarin
-        con Visual Studios y actualmente estoy codificando en Android con Android Studios.
-      </p>
-    </div>
-  </section>
+  <main>
+    <h2 class="titulo">ACERCA DE MÍ</h2>
 
-  <section class="contenedor">
-    <div class="tabla-1">
-      <div class="item-de-tabla">
-        <a class="icono clickable" href="assets/curriculo/cv.pdf" target="_blank">CV</a>
-        <span>Desarrollador Android</span>
+    <section>
+      <h3 class="subtitulo">Hoja de vida</h3>
+      <div class="contenedor">
+        <article class="perfil">
+          <img class="foto-perfil" src="assets/curriculo/perfil.jpg" alt="Foto de Yasser Ortiz T.">
+          <p>
+            Bienvenidos, mi nombre es Yasser Ortiz T. Soy ingeniero de sistemas, graduado en la Universidad Técnica de
+            Machala.
+            Al iniciar mi carrera empecé a desarrollar programas de escritorio utilizando Java, más adelante aprendí a
+            realizar conexiones con bases de datos relacionales usando MySQL y PostgreSQL, posteriormente desarrolle
+            programas con C# y fue hay que me interesó el desarrollo de aplicaciones móviles, inicie programando en
+            Xamarin
+            con Visual Studios y actualmente estoy codificando en Android con Android Studios.
+          </p>
+        </article>
       </div>
-      <div class="item-de-tabla">
-        <div class="icono">3+</div>
-        <span>Años de experiencia</span> 
+      <div class="contenedor">
+        <div class="tabla-1">
+          <div class="item-de-tabla">
+            <a class="icono clickable" href="assets/curriculo/cv.pdf" target="_blank">CV</a>
+            <span>Desarrollador Android</span>
+          </div>
+          <div class="item-de-tabla">
+            <div class="icono">3+</div>
+            <span>Años de experiencia</span>
+          </div>
+          <div class="item-de-tabla">
+            <div class="icono">10+</div>
+            <span>Proyectos realizados</span>
+          </div>
+        </div>
       </div>
-      <div class="item-de-tabla">
-        <div class="icono">10+</div>
-        <span>Proyectos realizados</span>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <p class="subtitulo">Mis mejores proyectos</p>
-  <section class="contenedor">
-    <div class="tabla-2">
-      <div class="proyecto">
-        <a href="https://github.com/yjot-dev/Rep-EMP/tree/v3-test" target="_blank">
-          <img class="proyectos-img" src="assets/proyectos/Android7.jpg" alt="Gamificación sobre emprendimiento">
-        </a>
-        <h3>Gamificación sobre emprendimiento</h3>
-        <ul>
-          <li><strong>Patrón de diseño arquitectónico:</strong> MVVM + Hexagonal</li>
-          <li><strong>Base de datos:</strong> MySQL</li>
-          <li><strong>API:</strong> Node</li>
-          <li><strong>Soporta:</strong> HTTPS</li>
-          <li><strong>Inyección de dependencias:</strong> Hilt</li>
-          <li><strong>Descripción:</strong> Esta app está orientada a la educación, cuenta con varios ejercicios sobre
-            la temática de emprendimiento, tiene cuatro modelos de actividades: Verdadero y falso, Elegir respuesta
-            correcta, Escribir respuesta correcta y Lectura comprensiva. Los ejercicios fueron creados según la
-            estrategia de enseñanza y aprendizaje: Gamificación.</li>
-        </ul>
+    <section>
+      <h3 class="subtitulo">Mis mejores proyectos</h3>
+      <div class="contenedor">
+        <div class="tabla-2">
+          <article class="proyecto">
+            <a href="https://github.com/yjot-dev/Rep-EMP/tree/v3-test" target="_blank">
+              <img class="proyectos-img" src="assets/proyectos/Android7.jpg" alt="Gamificación sobre emprendimiento">
+            </a>
+            <h3>Gamificación sobre emprendimiento</h3>
+            <ul>
+              <li><strong>Patrón de diseño arquitectónico:</strong> MVVM + Hexagonal</li>
+              <li><strong>Base de datos:</strong> MySQL</li>
+              <li><strong>API:</strong> Node</li>
+              <li><strong>Soporta:</strong> HTTPS</li>
+              <li><strong>Inyección de dependencias:</strong> Hilt</li>
+              <li><strong>Descripción:</strong> Esta app está orientada a la educación, cuenta con varios ejercicios
+                sobre
+                la temática de emprendimiento, tiene cuatro modelos de actividades: Verdadero y falso, Elegir respuesta
+                correcta, Escribir respuesta correcta y Lectura comprensiva. Los ejercicios fueron creados según la
+                estrategia de enseñanza y aprendizaje: Gamificación.</li>
+            </ul>
+          </article>
+          <article class="proyecto">
+            <a href="https://github.com/yjot-dev/Rep-AccidentReporter/tree/v2-test" target="_blank">
+              <img class="proyectos-img" src="assets/proyectos/Android8.jpg" alt="Reportero de incidentes">
+            </a>
+            <h3>Reportero de incidentes</h3>
+            <ul>
+              <li><strong>Patrón de diseño arquitectónico:</strong> MVVM + Hexagonal</li>
+              <li><strong>Base de datos:</strong> MySQL</li>
+              <li><strong>API:</strong> Node + Google Maps</li>
+              <li><strong>Soporta:</strong> HTTPS</li>
+              <li><strong>Inyección de dependencias:</strong> Hilt</li>
+              <li><strong>Descripción:</strong> Esta app le permite al usuario elegir una ubicación en el mapa para
+                reportar
+                algún incidente, luego de elegir una ubicación se mostrara un formulario donde debe elegir el tipo de
+                incidente y describir el incidente, luego la app obtiene la fecha actual en su dispositivo y guarda el
+                reporte en una base de datos.</li>
+            </ul>
+          </article>
+        </div>
+        <div class="ver-todos">
+          <a href="proyectos.html" class="btn-proyectos clickable">VER TODOS LOS PROYECTOS</a>
+        </div>
       </div>
+    </section>
 
-      <div class="proyecto">
-        <a href="https://github.com/yjot-dev/Rep-AccidentReporter/tree/v2-test" target="_blank">
-          <img class="proyectos-img" src="assets/proyectos/Android8.jpg" alt="Reportero de incidentes">
-        </a>
-        <h3>Reportero de incidentes</h3>
-        <ul>
-          <li><strong>Patrón de diseño arquitectónico:</strong> MVVM + Hexagonal</li>
-          <li><strong>Base de datos:</strong> MySQL</li>
-          <li><strong>API:</strong> Node + Google Maps</li>
-          <li><strong>Soporta:</strong> HTTPS</li>
-          <li><strong>Inyección de dependencias:</strong> Hilt</li>
-          <li><strong>Descripción:</strong> Esta app le permite al usuario elegir una ubicación en el mapa para reportar
-            algún incidente, luego de elegir una ubicación se mostrara un formulario donde debe elegir el tipo de
-            incidente y describir el incidente, luego la app obtiene la fecha actual en su dispositivo y guarda el
-            reporte en una base de datos.</li>
-        </ul>
+    <section>
+      <h3 class="subtitulo">Conocimientos técnicos</h3>
+      <div class="contenedor">
+        <div class="tabla-1">
+          <div class="item-de-tabla">
+            <img src="assets/curriculo/kotlin.jpg" alt="Kotlin">
+            <span>Kotlin</span>
+          </div>
+          <div class="item-de-tabla">
+            <img src="assets/curriculo/jetpack-compose.jpg" alt="Jetpack Compose">
+            <span>Jetpack Compose</span>
+          </div>
+          <div class="item-de-tabla">
+            <img src="assets/curriculo/xml.jpg" alt="XML">
+            <span>XML</span>
+          </div>
+          <div class="item-de-tabla">
+            <img src="assets/curriculo/mysql.jpg" alt="MySQL">
+            <span>MySQL</span>
+          </div>
+          <div class="item-de-tabla">
+            <img src="assets/curriculo/nodejs.jpg" alt="Node">
+            <span>Node</span>
+          </div>
+        </div>
       </div>
-    </div>
+    </section>
 
-    <div class="ver-todos">
-      <a href="proyectos.html" class="btn-proyectos clickable">VER TODOS LOS PROYECTOS</a>
-    </div>
-  </section>
+    <section>
+      <h3 class="subtitulo">Herramientas de desarrollo</h3>
+      <div class="contenedor">
+        <div class="tabla-1">
+          <div class="item-de-tabla">
+            <img src="assets/curriculo/canva.jpg" alt="Canva">
+            <span>Canva</span>
+          </div>
+          <div class="item-de-tabla">
+            <img src="assets/curriculo/android-studios.jpg" alt="Android Studio">
+            <span>Android Studio</span>
+          </div>
+          <div class="item-de-tabla">
+            <img src="assets/curriculo/visual-studio-code.jpg" alt="Visual Studio Code">
+            <span>Visual Studio Code</span>
+          </div>
+          <div class="item-de-tabla">
+            <img src="assets/curriculo/mysql-workbench.jpg" alt="MySQL Workbench">
+            <span>MySQL Workbench</span>
+          </div>
+          <div class="item-de-tabla">
+            <img src="assets/curriculo/github.jpg" alt="GitHub">
+            <span>GitHub</span>
+          </div>
+        </div>
+      </div>
+    </section>
 
-  <p class="subtitulo">Conocimientos técnicos</p>
-  <section class="contenedor">
-    <div class="tabla-1">
-      <div class="item-de-tabla">
-        <img src="assets/curriculo/kotlin.jpg" alt="Kotlin">
-        <span>Kotlin</span>
-      </div>
-      <div class="item-de-tabla">
-        <img src="assets/curriculo/jetpack-compose.jpg" alt="Jetpack Compose">
-        <span>Jetpack Compose</span>
-      </div>
-      <div class="item-de-tabla">
-        <img src="assets/curriculo/xml.jpg" alt="XML">
-        <span>XML</span>
-      </div>
-      <div class="item-de-tabla">
-        <img src="assets/curriculo/mysql.jpg" alt="MySQL">
-        <span>MySQL</span>
-      </div>
-      <div class="item-de-tabla">
-        <img src="assets/curriculo/nodejs.jpg" alt="Node">
-        <span>Node</span>
-      </div>
-    </div>
-  </section>
+    <section>
+      <h3 class="subtitulo">Habilidades blandas</h3>
+      <div class="contenedor">
+        <div class="tabla-1">
+          <div class="item-de-tabla">
+            <svg viewBox="0 0 36 36">
+              <path class="circle-bg"
+                d="M18 2.0845 a 15.9155 15.9155 0 1 1 0 31.831 a 15.9155 15.9155 0 1 1 0 -31.831" />
+              <path class="circle" stroke-dasharray="95, 5"
+                d="M18 2.0845 a 15.9155 15.9155 0 1 1 0 31.831 a 15.9155 15.9155 0 1 1 0 -31.831" />
+              <text x="18" y="20.35" class="percentage">95%</text>
+            </svg>
+            <span>Proactividad</span>
+          </div>
 
-  <p class="subtitulo">Herramientas de desarrollo</p>
-  <section class="contenedor">
-    <div class="tabla-1">
-      <div class="item-de-tabla">
-        <img src="assets/curriculo/canva.jpg" alt="Canva">
-        <span>Canva</span>
-      </div>
-      <div class="item-de-tabla">
-        <img src="assets/curriculo/android-studios.jpg" alt="Android Studio">
-        <span>Android Studio</span>
-      </div>
-      <div class="item-de-tabla">
-        <img src="assets/curriculo/visual-studio-code.jpg" alt="Visual Studio Code">
-        <span>Visual Studio Code</span>
-      </div>
-      <div class="item-de-tabla">
-        <img src="assets/curriculo/mysql-workbench.jpg" alt="MySQL Workbench">
-        <span>MySQL Workbench</span>
-      </div>
-      <div class="item-de-tabla">
-        <img src="assets/curriculo/github.jpg" alt="GitHub">
-        <span>GitHub</span>
-      </div>
-    </div>
-  </section>
+          <div class="item-de-tabla">
+            <svg viewBox="0 0 36 36">
+              <path class="circle-bg"
+                d="M18 2.0845 a 15.9155 15.9155 0 1 1 0 31.831 a 15.9155 15.9155 0 1 1 0 -31.831" />
+              <path class="circle" stroke-dasharray="95, 5"
+                d="M18 2.0845 a 15.9155 15.9155 0 1 1 0 31.831 a 15.9155 15.9155 0 1 1 0 -31.831" />
+              <text x="18" y="20.35" class="percentage">95%</text>
+            </svg>
+            <span>Comunicación</span>
+          </div>
 
-  <p class="subtitulo">Habilidades blandas</p>
-  <section class="contenedor">
-    <div class="tabla-1">
-      <div class="item-de-tabla">
-        <svg viewBox="0 0 36 36">
-          <path class="circle-bg" d="M18 2.0845 a 15.9155 15.9155 0 1 1 0 31.831 a 15.9155 15.9155 0 1 1 0 -31.831" />
-          <path class="circle" stroke-dasharray="95, 5"
-            d="M18 2.0845 a 15.9155 15.9155 0 1 1 0 31.831 a 15.9155 15.9155 0 1 1 0 -31.831" />
-          <text x="18" y="20.35" class="percentage">95%</text>
-        </svg>
-        <span>Proactividad</span>
-      </div>
+          <div class="item-de-tabla">
+            <svg viewBox="0 0 36 36">
+              <path class="circle-bg"
+                d="M18 2.0845 a 15.9155 15.9155 0 1 1 0 31.831 a 15.9155 15.9155 0 1 1 0 -31.831" />
+              <path class="circle" stroke-dasharray="92, 8"
+                d="M18 2.0845 a 15.9155 15.9155 0 1 1 0 31.831 a 15.9155 15.9155 0 1 1 0 -31.831" />
+              <text x="18" y="20.35" class="percentage">92%</text>
+            </svg>
+            <span>Adaptabilidad</span>
+          </div>
 
-      <div class="item-de-tabla">
-        <svg viewBox="0 0 36 36">
-          <path class="circle-bg" d="M18 2.0845 a 15.9155 15.9155 0 1 1 0 31.831 a 15.9155 15.9155 0 1 1 0 -31.831" />
-          <path class="circle" stroke-dasharray="95, 5"
-            d="M18 2.0845 a 15.9155 15.9155 0 1 1 0 31.831 a 15.9155 15.9155 0 1 1 0 -31.831" />
-          <text x="18" y="20.35" class="percentage">95%</text>
-        </svg>
-        <span>Comunicación</span>
+          <div class="item-de-tabla">
+            <svg viewBox="0 0 36 36">
+              <path class="circle-bg"
+                d="M18 2.0845 a 15.9155 15.9155 0 1 1 0 31.831 a 15.9155 15.9155 0 1 1 0 -31.831" />
+              <path class="circle" stroke-dasharray="90, 10"
+                d="M18 2.0845 a 15.9155 15.9155 0 1 1 0 31.831 a 15.9155 15.9155 0 1 1 0 -31.831" />
+              <text x="18" y="20.35" class="percentage">90%</text>
+            </svg>
+            <span>Capacidad resolutiva</span>
+          </div>
+        </div>
       </div>
-
-      <div class="item-de-tabla">
-        <svg viewBox="0 0 36 36">
-          <path class="circle-bg" d="M18 2.0845 a 15.9155 15.9155 0 1 1 0 31.831 a 15.9155 15.9155 0 1 1 0 -31.831" />
-          <path class="circle" stroke-dasharray="92, 8"
-            d="M18 2.0845 a 15.9155 15.9155 0 1 1 0 31.831 a 15.9155 15.9155 0 1 1 0 -31.831" />
-          <text x="18" y="20.35" class="percentage">92%</text>
-        </svg>
-        <span>Adaptabilidad</span>
-      </div>
-
-      <div class="item-de-tabla">
-        <svg viewBox="0 0 36 36">
-          <path class="circle-bg" d="M18 2.0845 a 15.9155 15.9155 0 1 1 0 31.831 a 15.9155 15.9155 0 1 1 0 -31.831" />
-          <path class="circle" stroke-dasharray="90, 10"
-            d="M18 2.0845 a 15.9155 15.9155 0 1 1 0 31.831 a 15.9155 15.9155 0 1 1 0 -31.831" />
-          <text x="18" y="20.35" class="percentage">90%</text>
-        </svg>
-        <span>Capacidad resolutiva</span>
-      </div>
-    </div>
-  </section>
+    </section>
+  </main>
 
   <footer class="footer">
     <h2>MI CONTACTO</h2>
@@ -235,7 +266,8 @@
   </footer>
 
   <script type="text/javascript" src="logic.js"></script>
-  <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+  <script type="text/javascript"
+    src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
 
 </html>

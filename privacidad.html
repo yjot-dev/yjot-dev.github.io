@@ -29,8 +29,22 @@
         <li class="submenu">
           <a href="#">Idioma ▾</a>
           <ul class="submenu-item">
-            <li onclick="doGTranslate('es|es')"><a href="#">Español</a></li>
-            <li onclick="doGTranslate('es|en')"><a href="#">Ingles</a></li>
+            <li onclick="doGTranslate('es|es')">
+              <a href="#">
+                <div class="idioma">
+                  <img src="https://flagcdn.com/48x36/es.png" alt="Bandera de España">
+                  <span>Español</span>
+                </div>
+              </a>
+            </li>
+            <li onclick="doGTranslate('es|en')">
+              <a href="#">
+                <div class="idioma">
+                  <img src="https://flagcdn.com/48x36/gb.png" alt="Bandera de Inglaterra">
+                  <span>Ingles</span>
+                </div>
+              </a>
+            </li>
           </ul>
         </li>
       </ul>
@@ -43,57 +57,76 @@
 
   <div id="traductor" style="display:none;"></div>
 
-  <h2 class="titulo">POLÍTICA DE PRIVACIDAD</h2>
-  <section class="aviso">
-    <p><strong>Última actualización:</strong> 07/08/2025</p>
-    <p>Esta política de privacidad describe cómo se recopila, utiliza y protege la información de los usuarios en las
-      aplicaciones desarrolladas por YJOT-DEV.</p>
-  </section>
-  <section class="privacidad">
-    <h3>Información que recopilamos</h3>
-    <p>Dependiendo de la funcionalidad de cada aplicación, podemos recopilar:</p>
-    <ul>
-      <li><strong>Información personal:</strong> nombre, correo electrónico o número de teléfono, solo si el usuario la
-        proporciona voluntariamente.</li>
-      <li><strong>Datos de uso:</strong> tipo de dispositivo, sistema operativo, duración de uso, funciones utilizadas
-        dentro de la app.</li>
-      <li><strong>Ubicación:</strong> si la app requiere servicios basados en ubicación, se solicitará permiso
-        explícito.</li>
-      <li><strong>Información de terceros:</strong> servicios como Google Analytics, Firebase o AdMob pueden recopilar
-        datos según sus propias políticas.</li>
-    </ul>
+  <main>
+    <h2 class="titulo">POLÍTICA DE PRIVACIDAD</h2>
 
-    <h3>Cómo usamos la información</h3>
-    <p>La información recopilada se utiliza para:</p>
-    <ul>
-      <li>Mejorar la experiencia del usuario.</li>
-      <li>Analizar el rendimiento y uso de la aplicación.</li>
-      <li>Enviar notificaciones (solo si el usuario lo permite).</li>
-      <li>Mostrar publicidad personalizada (si aplica).</li>
-    </ul>
+    <section>
+      <h3 class="subtitulo">Última actualización</h3>
+      <div class="contenedor">
+        <p><strong>Fecha: </strong>07/08/2025</p>
+        <p>Esta política de privacidad describe cómo se recopila, utiliza y protege la información de los usuarios en
+          las aplicaciones desarrolladas por YJOT-DEV.</p>
+      </div>
+      <div class="privacidad">
+        <div class="parrafo">
+          <h3>Información que recopilamos</h3>
+          <p>Dependiendo de la funcionalidad de cada aplicación, podemos recopilar:</p>
+          <ul>
+            <li><strong>Información personal:</strong> nombre, correo electrónico o número de teléfono, solo si el
+              usuario
+              la proporciona voluntariamente.</li>
+            <li><strong>Datos de uso:</strong> tipo de dispositivo, sistema operativo, duración de uso, funciones
+              utilizadas dentro de la app.</li>
+            <li><strong>Ubicación:</strong> si la app requiere servicios basados en ubicación, se solicitará permiso
+              explícito.</li>
+            <li><strong>Información de terceros:</strong> servicios como Google Analytics, Firebase o AdMob pueden
+              recopilar datos según sus propias políticas.</li>
+          </ul>
+        </div>
 
-    <h3>Compartir información</h3>
-    <p>No compartimos información personal con terceros, excepto en los siguientes casos:</p>
-    <ul>
-      <li>Con proveedores de servicios que nos ayudan a operar la app (análisis, publicidad).</li>
-      <li>Cuando sea requerido por ley.</li>
-    </ul>
+        <div class="parrafo">
+          <h3>Cómo usamos la información</h3>
+          <p>La información recopilada se utiliza para:</p>
+          <ul>
+            <li>Mejorar la experiencia del usuario.</li>
+            <li>Analizar el rendimiento y uso de la aplicación.</li>
+            <li>Enviar notificaciones (solo si el usuario lo permite).</li>
+            <li>Mostrar publicidad personalizada (si aplica).</li>
+          </ul>
+        </div>
 
-    <h3>Privacidad de menores</h3>
-    <p>Nuestras aplicaciones no están dirigidas a menores de 13 años. Si se recopila información sin consentimiento, se
-      eliminará de inmediato.</p>
+        <div class="parrafo">
+          <h3>Compartir información</h3>
+          <p>No compartimos información personal con terceros, excepto en los siguientes casos:</p>
+          <ul>
+            <li>Con proveedores de servicios que nos ayudan a operar la app (análisis, publicidad).</li>
+            <li>Cuando sea requerido por ley.</li>
+          </ul>
+        </div>
 
-    <h3>Derechos del usuario</h3>
-    <p>Los usuarios tienen derecho a:</p>
-    <ul>
-      <li>Solicitar acceso, corrección o eliminación de sus datos personales.</li>
-      <li>Revocar permisos desde la configuración del dispositivo.</li>
-    </ul>
+        <div class="parrafo">
+          <h3>Privacidad de menores</h3>
+          <p>Nuestras aplicaciones no están dirigidas a menores de 13 años. Si se recopila información sin
+            consentimiento, se eliminará de inmediato.</p>
+        </div>
 
-    <h3>Cambios en esta política</h3>
-    <p>Nos reservamos el derecho de modificar esta Política de Privacidad en cualquier momento. Se notificará a los
-      usuarios mediante la app o nuestra página web.</p>
-  </section>
+        <div class="parrafo">
+          <h3>Derechos del usuario</h3>
+          <p>Los usuarios tienen derecho a:</p>
+          <ul>
+            <li>Solicitar acceso, corrección o eliminación de sus datos personales.</li>
+            <li>Revocar permisos desde la configuración del dispositivo.</li>
+          </ul>
+        </div>
+
+        <div class="parrafo">
+          <h3>Cambios en esta política</h3>
+          <p>Nos reservamos el derecho de modificar esta Política de Privacidad en cualquier momento. Se notificará a
+            los usuarios mediante la app o nuestra página web.</p>
+        </div>
+      </div>
+    </section>
+  </main>
 
   <footer class="footer">
     <h2>MI CONTACTO</h2>
@@ -112,7 +145,8 @@
   </footer>
 
   <script type="text/javascript" src="logic.js"></script>
-  <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+  <script type="text/javascript"
+    src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
 
 </html>
