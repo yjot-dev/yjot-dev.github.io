@@ -145,13 +145,13 @@ html {
 .idioma {
   display: flex;
   align-items: center;
-  gap: 8px; /* espacio entre icono y texto */
+  gap: 0.4rem; /* espacio entre icono y texto */
 }
 
 .idioma img {
-  width: 20px;
+  width: 1.1rem;
   height: auto;
-  border-radius: 3px; /* opcional, suaviza bordes */
+  border-radius: 0.16rem;
 }
 
 /* Menu desplegable pantallas grandes */
