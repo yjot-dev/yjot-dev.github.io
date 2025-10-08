@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>YJOT DEV</title>
-  <link rel="icon" type="image/png" href="assets/header-footer/logo.jpg">
+  <link rel="icon" type="image/png" href="assets/header-footer/logo.png">
   <link rel="stylesheet" href="style.css">
 </head>
 
@@ -13,37 +13,33 @@
   <header class="header">
     <nav class="topbar">
       <div class="logo">
-        <img src="assets/header-footer/logo.jpg" alt="Logo">
+        <img src="assets/header-footer/logo.png" alt="Logo">
         <span>YJOT DEV</span>
       </div>
 
       <ul class="menu">
         <li><a href="privacidad.html">Política de privacidad</a></li>
         <li class="submenu">
-          <a href="#">Acerca de mí ▾</a>
-          <ul class="submenu-item">
+          <button class="item" aria-expanded="false" aria-controls="submenu-cv">Acerca de mí ▾</button>
+          <ul class="submenu-item" id="submenu-cv" hidden>
             <li><a href="index.html">Mi currículo</a></li>
             <li><a href="proyectos.html">Mis proyectos</a></li>
           </ul>
         </li>
         <li class="submenu">
-          <a href="#">Idioma ▾</a>
-          <ul class="submenu-item">
-            <li onclick="doGTranslate('es|es')">
-              <a href="#">
-                <div class="idioma">
-                  <img src="https://flagcdn.com/48x36/es.png" alt="Bandera de España">
-                  <span>Español</span>
-                </div>
-              </a>
+          <button class="item" aria-expanded="false" aria-controls="submenu-idioma">Idioma ▾</button>
+          <ul class="submenu-item" id="submenu-idioma" hidden>
+            <li>
+              <button class="item" onclick="doGTranslate('es|es')">
+                <img src="https://flagcdn.com/48x36/es.png" alt="Bandera de España">
+                <span>Español</span>
+              </button>
             </li>
-            <li onclick="doGTranslate('es|en')">
-              <a href="#">
-                <div class="idioma">
-                  <img src="https://flagcdn.com/48x36/gb.png" alt="Bandera de Inglaterra">
-                  <span>Ingles</span>
-                </div>
-              </a>
+            <li>
+              <button class="item" onclick="doGTranslate('es|en')">
+                <img src="https://flagcdn.com/48x36/gb.png" alt="Bandera de Inglaterra">
+                <span>Ingles</span>
+              </button>
             </li>
           </ul>
         </li>
@@ -62,13 +58,11 @@
 
     <section>
       <h3 class="subtitulo">Última actualización</h3>
-      <div class="contenedor">
+      <div class="privacidad">
         <p><strong>Fecha: </strong>07/08/2025</p>
         <p>Esta política de privacidad describe cómo se recopila, utiliza y protege la información de los usuarios en
           las aplicaciones desarrolladas por YJOT-DEV.</p>
-      </div>
-      <div class="privacidad">
-        <div class="parrafo">
+        <div>
           <h3>Información que recopilamos</h3>
           <p>Dependiendo de la funcionalidad de cada aplicación, podemos recopilar:</p>
           <ul>
@@ -84,7 +78,7 @@
           </ul>
         </div>
 
-        <div class="parrafo">
+        <div>
           <h3>Cómo usamos la información</h3>
           <p>La información recopilada se utiliza para:</p>
           <ul>
@@ -95,7 +89,7 @@
           </ul>
         </div>
 
-        <div class="parrafo">
+        <div>
           <h3>Compartir información</h3>
           <p>No compartimos información personal con terceros, excepto en los siguientes casos:</p>
           <ul>
@@ -104,13 +98,13 @@
           </ul>
         </div>
 
-        <div class="parrafo">
+        <div>
           <h3>Privacidad de menores</h3>
           <p>Nuestras aplicaciones no están dirigidas a menores de 13 años. Si se recopila información sin
             consentimiento, se eliminará de inmediato.</p>
         </div>
 
-        <div class="parrafo">
+        <div>
           <h3>Derechos del usuario</h3>
           <p>Los usuarios tienen derecho a:</p>
           <ul>
@@ -119,7 +113,7 @@
           </ul>
         </div>
 
-        <div class="parrafo">
+        <div>
           <h3>Cambios en esta política</h3>
           <p>Nos reservamos el derecho de modificar esta Política de Privacidad en cualquier momento. Se notificará a
             los usuarios mediante la app o nuestra página web.</p>

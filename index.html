@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>YJOT DEV</title>
-  <link rel="icon" type="image/png" href="assets/header-footer/logo.jpg">
+  <link rel="icon" type="image/png" href="assets/header-footer/logo.png">
   <link rel="stylesheet" href="style.css">
 </head>
 
@@ -13,37 +13,33 @@
   <header class="header">
     <nav class="topbar">
       <div class="logo">
-        <img src="assets/header-footer/logo.jpg" alt="Logo">
+        <img src="assets/header-footer/logo.png" alt="Logo">
         <span>YJOT DEV</span>
       </div>
 
       <ul class="menu">
         <li><a href="privacidad.html">Política de privacidad</a></li>
         <li class="submenu">
-          <a href="#">Acerca de mí ▾</a>
-          <ul class="submenu-item">
+          <button class="item" aria-expanded="false" aria-controls="submenu-cv">Acerca de mí ▾</button>
+          <ul class="submenu-item" id="submenu-cv" hidden>
             <li><a href="index.html">Mi currículo</a></li>
             <li><a href="proyectos.html">Mis proyectos</a></li>
           </ul>
         </li>
         <li class="submenu">
-          <a href="#">Idioma ▾</a>
-          <ul class="submenu-item">
-            <li onclick="doGTranslate('es|es')">
-              <a href="#">
-                <div class="idioma">
-                  <img src="https://flagcdn.com/48x36/es.png" alt="Bandera de España">
-                  <span>Español</span>
-                </div>
-              </a>
+          <button class="item" aria-expanded="false" aria-controls="submenu-idioma">Idioma ▾</button>
+          <ul class="submenu-item" id="submenu-idioma" hidden>
+            <li>
+              <button class="item" onclick="doGTranslate('es|es')">
+                <img src="https://flagcdn.com/48x36/es.png" alt="Bandera de España">
+                <span>Español</span>
+              </button>
             </li>
-            <li onclick="doGTranslate('es|en')">
-              <a href="#">
-                <div class="idioma">
-                  <img src="https://flagcdn.com/48x36/gb.png" alt="Bandera de Inglaterra">
-                  <span>Ingles</span>
-                </div>
-              </a>
+            <li>
+              <button class="item" onclick="doGTranslate('es|en')">
+                <img src="https://flagcdn.com/48x36/gb.png" alt="Bandera de Inglaterra">
+                <span>Ingles</span>
+              </button>
             </li>
           </ul>
         </li>
