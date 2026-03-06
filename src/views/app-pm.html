@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YJOT DEV</title>
+    <link rel="icon" type="image/png" href="../assets/icons/logo.png">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <header class="header">
+        <nav class="topbar">
+            <div class="logo">
+                <img src="../assets/icons/logo.png" alt="Logo">
+                <span>YJOT DEV</span>
+            </div>
+
+            <ul class="menu">
+                <li><a href="../views/privacy.html">Política de privacidad</a></li>
+                <li class="submenu">
+                    <button class="item" aria-expanded="false" aria-controls="submenu-cv">Acerca de mí ▾</button>
+                    <ul class="submenu-item" id="submenu-cv" hidden>
+                        <li><a href="../../index.html">Mi currículo</a></li>
+                        <li><a href="../views/project.html">Mis proyectos</a></li>
+                    </ul>
+                </li>
+                <li class="submenu">
+                    <button class="item" aria-expanded="false" aria-controls="submenu-idioma">Idioma ▾</button>
+                    <ul class="submenu-item" id="submenu-idioma" hidden>
+                        <li>
+                            <button class="item" onclick="doGTranslate('es|es')">
+                                <img src="https://flagcdn.com/48x36/es.png" alt="Bandera de España">
+                                <span>Español</span>
+                            </button>
+                        </li>
+                        <li>
+                            <button class="item" onclick="doGTranslate('es|en')">
+                                <img src="https://flagcdn.com/48x36/gb.png" alt="Bandera de Inglaterra">
+                                <span>Ingles</span>
+                            </button>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="portada">
+            <img src="../assets/apps/pm.png" alt="Imagen de portada">
+        </div>
+    </header>
+
+    <div id="traductor" style="display:none;"></div>
+
+    <main>
+        <h2 class="titulo">PLAYER MUSIC</h2>
+
+        <section>
+            <h3 class="subtitulo">Descripción general</h3>
+            <div class="contenedor">
+                <article class="perfil">
+                    <p>
+                        PLAYER MUSIC es una aplicación móvil nativa de Android diseñada para ofrecer una experiencia de
+                        reproducción de música local fluida y organizada. El objetivo principal es permitir a los
+                        usuarios gestionar y disfrutar de su biblioteca musical personal almacenada en el dispositivo,
+                        con funcionalidades robustas para la creación y administración de playlists.
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <section>
+            <h3 class="subtitulo">Uso de la aplicación</h3>
+            <div class="contenedor">
+                <article class="perfil">
+                    <p>
+                        El flujo de uso de la aplicación está diseñado para ser intuitivo y potente, guiando al usuario
+                        a través de los siguientes pasos:
+                    </p>
+                    <ol>
+                        <li>
+                            <strong>Exploración de la Biblioteca Musical:</strong>
+                            Al iniciar la aplicación, el usuario es recibido en la vista principal, la Lista de
+                            Artistas.
+                            Esta pantalla organiza automáticamente toda la música local del dispositivo por artista,
+                            sirviendo como el punto de partida para la exploración musical.
+                            Desde aquí, el usuario puede:
+                            <ul>
+                                <li>Seleccionar un artista para navegar a una vista detallada con todas sus canciones.
+                                </li>
+                                <li>Acceder a la gestión de playlists a través de un ícono en la barra superior.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>Gestión y Creación de Playlists:</strong>
+                            La aplicación ofrece un sistema completo para que los usuarios guarden sus propias
+                            colecciones de música:
+                            <ul>
+                                <li><strong>Vista de Listas de Reproducción:</strong> Desde aquí, los usuarios pueden
+                                    ver todas sus playlists creadas. Tienen la capacidad de editar el nombre de
+                                    cualquier lista o eliminarla por completo.</li>
+                                <li><strong>Añadir Música a una Playlist:</strong> Mientras explora la música de un
+                                    artista, el usuario puede seleccionar una canción y añadirla a una playlist. Se
+                                    presenta una interfaz donde puede buscar una lista existente o crear una nueva al
+                                    instante. Al crear una nueva lista, la canción se añade automáticamente a ella,
+                                    agilizando el proceso.</li>
+                                <li><strong>Gestionar Contenido de una Playlist:</strong> Al entrar en una playlist
+                                    específica, el usuario puede ver todas las canciones que contiene y tiene la opción
+                                    de eliminar pistas individualmente.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>Reproducción de Música:</strong>
+                            El núcleo de la experiencia se centra en la pantalla de Música Actual, el reproductor
+                            principal.
+                            El usuario puede llegar aquí seleccionando una canción desde la lista de un artista o desde
+                            una de sus playlists.
+                            Esta pantalla proporciona control total sobre la reproducción con las siguientes
+                            funcionalidades:
+                            <ul>
+                                <li><strong>Controles Esenciales:</strong> Pausar, reanudar, y navegar a la canción
+                                    siguiente o anterior en la cola de reproducción.</li>
+                                <li><strong>Modos de Reproducción:</strong> El usuario puede personalizar su experiencia
+                                    auditiva activando el modo de reproducción aleatoria (shuffle) o configurando
+                                    diferentes modos de repetición (repetir toda la lista o la canción actual).</li>
+                            </ul>
+                        </li>
+                    </ol>
+                </article>
+            </div>
+        </section>
+
+        <section>
+            <h3 class="subtitulo">Acceso a la aplicación</h3>
+            <div class="contenedor">
+                <div class="tabla-1">
+                    <div class="item-de-tabla">
+                        <a class="icono clickable" href="https://github.com/yjot-dev/Rep-PlayerMusic/tree/v5-test"
+                            target="_blank">
+                            <img class="acceso-apps" src="../assets/icons/github.svg" alt="GitHub">
+                        </a>
+                        <span>Ver código en Github</span>
+                    </div>
+                    <div class="item-de-tabla">
+                        <a class="icono clickable" href="https://youtu.be/Ivs9VpvraVI" target="_blank">
+                            <img class="acceso-apps" src="../assets/icons/video.svg" alt="Video demo">
+                        </a>
+                        <span>Ver video demo en Youtube</span>
+                    </div>
+                    <div class="item-de-tabla">
+                        <a class="icono clickable" href="#" target="_blank">
+                            <img class="acceso-apps" src="../assets/icons/play_store.svg" alt="Play Store">
+                        </a>
+                        <span>Descargar app en Play Store</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <h2>MI CONTACTO</h2>
+        <p>Puedes contactarme en LinkedIn y Gmail, además puedes consultar mis proyectos realizados en GitHub.</p>
+        <div class="footer-icons">
+            <a href="mailto:2010guabo@gmail.com" aria-label="Correo">
+                <img src="../assets/icons/email.svg" alt="Email">
+            </a>
+            <a href="https://ec.linkedin.com/in/yjot-dev" target="_blank" aria-label="LinkedIn">
+                <img src="../assets/icons/linkedin.svg" alt="LinkedIn">
+            </a>
+            <a href="https://github.com/yjot-dev" target="_blank" aria-label="GitHub">
+                <img src="../assets/icons/github.svg" alt="GitHub">
+            </a>
+        </div>
+    </footer>
+
+    <script type="text/javascript" src="../js/logic.js"></script>
+    <script type="text/javascript"
+        src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+        </script>
+</body>
+
+</html>

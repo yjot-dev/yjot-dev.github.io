@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YJOT DEV</title>
+    <link rel="icon" type="image/png" href="../assets/icons/logo.png">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <header class="header">
+        <nav class="topbar">
+            <div class="logo">
+                <img src="../assets/icons/logo.png" alt="Logo">
+                <span>YJOT DEV</span>
+            </div>
+
+            <ul class="menu">
+                <li><a href="../views/privacy.html">Política de privacidad</a></li>
+                <li class="submenu">
+                    <button class="item" aria-expanded="false" aria-controls="submenu-cv">Acerca de mí ▾</button>
+                    <ul class="submenu-item" id="submenu-cv" hidden>
+                        <li><a href="../../index.html">Mi currículo</a></li>
+                        <li><a href="../views/project.html">Mis proyectos</a></li>
+                    </ul>
+                </li>
+                <li class="submenu">
+                    <button class="item" aria-expanded="false" aria-controls="submenu-idioma">Idioma ▾</button>
+                    <ul class="submenu-item" id="submenu-idioma" hidden>
+                        <li>
+                            <button class="item" onclick="doGTranslate('es|es')">
+                                <img src="https://flagcdn.com/48x36/es.png" alt="Bandera de España">
+                                <span>Español</span>
+                            </button>
+                        </li>
+                        <li>
+                            <button class="item" onclick="doGTranslate('es|en')">
+                                <img src="https://flagcdn.com/48x36/gb.png" alt="Bandera de Inglaterra">
+                                <span>Ingles</span>
+                            </button>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="portada">
+            <img src="../assets/apps/emp.png" alt="Imagen de portada">
+        </div>
+    </header>
+
+    <div id="traductor" style="display:none;"></div>
+
+    <main>
+        <h2 class="titulo">EMPRENDIMIENTO PRIMARIA</h2>
+
+        <section>
+            <h3 class="subtitulo">Descripción general</h3>
+            <div class="contenedor">
+                <article class="perfil">
+                    <p>
+                        EMP es una aplicación móvil educativa y gamificada, diseñada para enseñar conceptos
+                        fundamentales de emprendimiento a través de una experiencia interactiva y progresiva. El
+                        objetivo principal es motivar al usuario a aprender mediante lecciones estructuradas y
+                        ejercicios prácticos, mientras sigue su progreso y gestiona su perfil de aprendizaje.
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <section>
+            <h3 class="subtitulo">Uso de la aplicación</h3>
+            <div class="contenedor">
+                <article class="perfil">
+                    <p>
+                        El flujo de uso de la aplicación está diseñado para ser intuitivo y completo, guiando al usuario
+                        a través de los siguientes pasos:
+                    </p>
+                    <ol>
+                        <li>
+                            <strong>Acceso y Autenticación de Usuario:</strong>
+                            Al iniciar la aplicación, el usuario se encuentra con una pantalla de Login clara y
+                            funcional.
+                            Desde aquí, tiene tres opciones directas:
+                            <ul>
+                                <li><strong>Iniciar Sesión:</strong> Los usuarios existentes pueden acceder rápidamente
+                                    ingresando su nombre de usuario/correo y contraseña.</li>
+                                <li><strong>Registrarse:</strong> Los nuevos usuarios son dirigidos a una vista de
+                                    Registro donde pueden crear su cuenta proporcionando un nombre de usuario, correo
+                                    electrónico y contraseña.</li>
+                                <li><strong>Recuperar Clave:</strong> Si un usuario olvida su contraseña, puede ingresar
+                                    su correo para recibir un código de verificación. Tras validar el código, puede
+                                    establecer una nueva contraseña y recuperar el acceso a su cuenta.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>Navegación en el Menú Principal:</strong>
+                            Una vez autenticado, el usuario accede al núcleo de la aplicación, que presenta una barra de
+                            navegación superior con cuatro secciones principales, cada una ofreciendo una funcionalidad
+                            clave:
+                            <ul>
+                                <li><strong>Perfil de Usuario:</strong> Esta es la sección personal del usuario. Aquí
+                                    puede visualizar y actualizar su información (foto de perfil, nombre de usuario,
+                                    correo y contraseña). Para garantizar la seguridad, cualquier actualización o la
+                                    eliminación de la cuenta requiere una verificación mediante un código enviado a su
+                                    correo.</li>
+                                <li><strong>Módulos Educativos (Unidades):</strong> El corazón del aprendizaje. En esta
+                                    vista, el usuario avanza a través de lecciones estructuradas sobre emprendimiento.
+                                    El contenido se presenta mediante ejercicios gamificados como verdadero/falso,
+                                    completar oraciones y emparejar conceptos, obteniendo un puntaje al finalizar cada
+                                    nivel.</li>
+                                <li><strong>Proyectos Prácticos:</strong> Para inspirar la acción, esta sección ofrece
+                                    una lista de ideas de proyectos de emprendimiento. Cada proyecto incluye información
+                                    detallada que sirve como guía y ejemplo para que el usuario pueda empezar a
+                                    conceptualizar su propio negocio.</li>
+                                <li><strong>Progreso y Feedback (Puntaje):</strong> Esta vista funciona como un panel de
+                                    control del rendimiento del usuario. Muestra métricas clave como el puntaje total
+                                    acumulado, el tiempo total de estudio en la app y el porcentaje de avance del curso.
+                                    Además, incluye una función para que el usuario pueda enviar sus opiniones o
+                                    sugerencias directamente al desarrollador.</li>
+                            </ul>
+                        </li>
+                    </ol>
+                </article>
+            </div>
+        </section>
+
+        <section>
+            <h3 class="subtitulo">Acceso a la aplicación</h3>
+            <div class="contenedor">
+                <div class="tabla-1">
+                    <div class="item-de-tabla">
+                        <a class="icono clickable" href="https://github.com/yjot-dev/Rep-EMP/tree/v3-test"
+                            target="_blank">
+                            <img class="acceso-apps" src="../assets/icons/github.svg" alt="GitHub">
+                        </a>
+                        <span>Ver código en Github</span>
+                    </div>
+                    <div class="item-de-tabla">
+                        <a class="icono clickable" href="https://youtu.be/8ceBytM3tVI" target="_blank">
+                            <img class="acceso-apps" src="../assets/icons/video.svg" alt="Video demo">
+                        </a>
+                        <span>Ver video demo en Youtube</span>
+                    </div>
+                    <div class="item-de-tabla">
+                        <a class="icono clickable" href="#" target="_blank">
+                            <img class="acceso-apps" src="../assets/icons/play_store.svg" alt="Play Store">
+                        </a>
+                        <span>Descargar app en Play Store</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <h2>MI CONTACTO</h2>
+        <p>Puedes contactarme en LinkedIn y Gmail, además puedes consultar mis proyectos realizados en GitHub.</p>
+        <div class="footer-icons">
+            <a href="mailto:2010guabo@gmail.com" aria-label="Correo">
+                <img src="../assets/icons/email.svg" alt="Email">
+            </a>
+            <a href="https://ec.linkedin.com/in/yjot-dev" target="_blank" aria-label="LinkedIn">
+                <img src="../assets/icons/linkedin.svg" alt="LinkedIn">
+            </a>
+            <a href="https://github.com/yjot-dev" target="_blank" aria-label="GitHub">
+                <img src="../assets/icons/github.svg" alt="GitHub">
+            </a>
+        </div>
+    </footer>
+
+    <script type="text/javascript" src="../js/logic.js"></script>
+    <script type="text/javascript"
+        src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+        </script>
+</body>
+
+</html>

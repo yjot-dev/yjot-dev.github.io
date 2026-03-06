@@ -222,6 +222,12 @@ html {
   text-align: center;
 }
 
+/* Paginas de las apps */
+.item-de-tabla .acceso-apps {
+  width: 5rem;
+  height: 5rem;
+}
+
 /* Pagina index (Mi curriculo) */
 .perfil {
   display: flex;
@@ -231,11 +237,16 @@ html {
   flex-wrap: wrap;
 }
 
-.perfil p {
+.perfil p,
+.perfil li {
   flex: 1;
   font-size: 1rem;
   line-height: 1.6;
   text-align: justify;
+}
+
+.perfil ul li {
+  margin-left: 1rem;
 }
 
 .foto-perfil {
@@ -449,12 +460,12 @@ html {
 .footer-icons {
   display: flex;
   justify-content: center;
-  gap: 1rem;
+  gap: 2rem;
 }
 
 .footer-icons a img {
-  width: 3rem;
-  height: 3rem;
+  width: 2rem;
+  height: 2rem;
   transition: transform 0.3s ease;
 }
 

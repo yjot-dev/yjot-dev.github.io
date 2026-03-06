@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YJOT DEV</title>
+    <link rel="icon" type="image/png" href="../assets/icons/logo.png">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <header class="header">
+        <nav class="topbar">
+            <div class="logo">
+                <img src="../assets/icons/logo.png" alt="Logo">
+                <span>YJOT DEV</span>
+            </div>
+
+            <ul class="menu">
+                <li><a href="../views/privacy.html">Política de privacidad</a></li>
+                <li class="submenu">
+                    <button class="item" aria-expanded="false" aria-controls="submenu-cv">Acerca de mí ▾</button>
+                    <ul class="submenu-item" id="submenu-cv" hidden>
+                        <li><a href="../../index.html">Mi currículo</a></li>
+                        <li><a href="../views/project.html">Mis proyectos</a></li>
+                    </ul>
+                </li>
+                <li class="submenu">
+                    <button class="item" aria-expanded="false" aria-controls="submenu-idioma">Idioma ▾</button>
+                    <ul class="submenu-item" id="submenu-idioma" hidden>
+                        <li>
+                            <button class="item" onclick="doGTranslate('es|es')">
+                                <img src="https://flagcdn.com/48x36/es.png" alt="Bandera de España">
+                                <span>Español</span>
+                            </button>
+                        </li>
+                        <li>
+                            <button class="item" onclick="doGTranslate('es|en')">
+                                <img src="https://flagcdn.com/48x36/gb.png" alt="Bandera de Inglaterra">
+                                <span>Ingles</span>
+                            </button>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="portada">
+            <img src="../assets/apps/om.png" alt="Imagen de portada">
+        </div>
+    </header>
+
+    <div id="traductor" style="display:none;"></div>
+
+    <main>
+        <h2 class="titulo">ORTOGRAFÍA MARIAMEL</h2>
+
+        <section>
+            <h3 class="subtitulo">Descripción general</h3>
+            <div class="contenedor">
+                <article class="perfil">
+                    <p>
+                        Ortografia MariaMel (OM) es una aplicación móvil educativa diseñada para fortalecer las
+                        habilidades de ortografía en español a través de la gamificación. La app se enfoca en ofrecer
+                        una experiencia de aprendizaje interactiva y estructurada, con ejercicios basados en el
+                        contenido de un libro de texto, presentados en un formato de juego para motivar al estudiante.
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <section>
+            <h3 class="subtitulo">Uso de la aplicación</h3>
+            <div class="contenedor">
+                <article class="perfil">
+                    <p>
+                        El flujo de uso de la aplicación está diseñado para ser intuitivo y progresivo, guiando al
+                        usuario a través de los siguientes pasos:
+                    </p>
+                    <ol>
+                        <li>
+                            <strong>Bienvenida y Registro de Usuario:</strong>
+                            Al abrir la aplicación, el usuario es recibido en una pantalla de inicio.
+                            Para comenzar, debe registrarse proporcionando su nombre y seleccionando su edad.
+                            Este paso personaliza la experiencia y permite llevar un registro de su progreso.
+                        </li>
+                        <li>
+                            <strong>Acceso a Contenidos (Unidades y Portada):</strong>
+                            Una vez registrado, el usuario accede al menú principal donde puede explorar los contenidos
+                            de dos maneras:
+                            <ul>
+                                <li><strong>Unidades:</strong> El núcleo de la aplicación se organiza en unidades
+                                    temáticas. Cada unidad presenta un tema de ortografía específico (por ejemplo, el
+                                    uso de la tilde diacrítica) con una descripción clara de los conceptos que se
+                                    aprenderán.</li>
+                                <li><strong>Portada:</strong> Esta sección muestra una imagen del libro en el que se
+                                    basa el contenido de la aplicación, conectando la experiencia digital con su fuente
+                                    educativa.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>Aprendizaje Interactivo (Actividades):</strong>
+                            Cada unidad está asociada a una actividad gamificada que constituye la parte interactiva de
+                            la aplicación. El flujo de juego es el siguiente:
+                            <ul>
+                                <li>Al iniciar una actividad, el usuario enfrenta una serie de tres ejercicios diseñados
+                                    para reforzar el tema de la unidad. Los juegos incluyen emparejar tarjetas (por
+                                    ejemplo, un monosílabo con su oración de ejemplo) y completar oraciones
+                                    seleccionando la opción correcta.</li>
+                                <li>El sistema cuenta con un sistema de vidas. Si el usuario completa los ejercicios sin
+                                    perder todas sus vidas, recibe un mensaje de felicitaciones. En caso contrario, se
+                                    le anima a intentarlo de nuevo.</li>
+                                <li>Al finalizar, se muestra un resumen con el puntaje obtenido, permitiendo al usuario
+                                    reiniciar el juego para una nueva partida y mejorar su resultado.</li>
+                            </ul>
+                        </li>
+                    </ol>
+                </article>
+            </div>
+        </section>
+
+        <section>
+            <h3 class="subtitulo">Acceso a la aplicación</h3>
+            <div class="contenedor">
+                <div class="tabla-1">
+                    <div class="item-de-tabla">
+                        <a class="icono clickable"
+                            href="https://github.com/yjot-dev/Rep-OrtografiaMariaMel/tree/v3-test" target="_blank">
+                            <img class="acceso-apps" src="../assets/icons/github.svg" alt="GitHub">
+                        </a>
+                        <span>Ver código en Github</span>
+                    </div>
+                    <div class="item-de-tabla">
+                        <a class="icono clickable" href="https://youtu.be/6ixV2zPoIQo" target="_blank">
+                            <img class="acceso-apps" src="../assets/icons/video.svg" alt="Video demo">
+                        </a>
+                        <span>Ver video demo en Youtube</span>
+                    </div>
+                    <div class="item-de-tabla">
+                        <a class="icono clickable" href="#" target="_blank">
+                            <img class="acceso-apps" src="../assets/icons/play_store.svg" alt="Play Store">
+                        </a>
+                        <span>Descargar app en Play Store</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <h2>MI CONTACTO</h2>
+        <p>Puedes contactarme en LinkedIn y Gmail, además puedes consultar mis proyectos realizados en GitHub.</p>
+        <div class="footer-icons">
+            <a href="mailto:2010guabo@gmail.com" aria-label="Correo">
+                <img src="../assets/icons/email.svg" alt="Email">
+            </a>
+            <a href="https://ec.linkedin.com/in/yjot-dev" target="_blank" aria-label="LinkedIn">
+                <img src="../assets/icons/linkedin.svg" alt="LinkedIn">
+            </a>
+            <a href="https://github.com/yjot-dev" target="_blank" aria-label="GitHub">
+                <img src="../assets/icons/github.svg" alt="GitHub">
+            </a>
+        </div>
+    </footer>
+
+    <script type="text/javascript" src="../js/logic.js"></script>
+    <script type="text/javascript"
+        src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+        </script>
+</body>
+
+</html>

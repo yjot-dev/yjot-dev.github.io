@@ -5,25 +5,25 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>YJOT DEV</title>
-  <link rel="icon" type="image/png" href="assets/header-footer/logo.png">
-  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="../assets/icons/logo.png">
+  <link rel="stylesheet" href="../css/style.css">
 </head>
 
 <body>
   <header class="header">
     <nav class="topbar">
       <div class="logo">
-        <img src="assets/header-footer/logo.png" alt="Logo">
+        <img src="../assets/icons/logo.png" alt="Logo">
         <span>YJOT DEV</span>
       </div>
 
       <ul class="menu">
-        <li><a href="privacy.html">Política de privacidad</a></li>
+        <li><a href="../views/privacy.html">Política de privacidad</a></li>
         <li class="submenu">
           <button class="item" aria-expanded="false" aria-controls="submenu-cv">Acerca de mí ▾</button>
           <ul class="submenu-item" id="submenu-cv" hidden>
-            <li><a href="index.html">Mi currículo</a></li>
-            <li><a href="project.html">Mis proyectos</a></li>
+            <li><a href="../../index.html">Mi currículo</a></li>
+            <li><a href="../views/project.html">Mis proyectos</a></li>
           </ul>
         </li>
         <li class="submenu">
@@ -47,7 +47,7 @@
     </nav>
 
     <div class="portada">
-      <img src="assets/header-footer/cover.png" alt="Imagen de portada">
+      <img src="../assets/icons/cover.png" alt="Imagen de portada">
     </div>
   </header>
 
@@ -59,7 +59,7 @@
     <section>
       <h3 class="subtitulo">Última actualización</h3>
       <div class="privacidad">
-        <p><strong>Fecha: </strong>23/02/2026</p>
+        <p><strong>Fecha: </strong>05/03/2026</p>
         <p>Esta política de privacidad describe cómo se recopila, utiliza y protege la información de los usuarios en
           las aplicaciones desarrolladas por YJOT-DEV.</p>
         <div>
@@ -71,24 +71,36 @@
               la proporciona voluntariamente.</li>
             <li><strong>Datos de uso:</strong> Tipo de dispositivo, sistema operativo, duración de uso, funciones
               utilizadas dentro de la app.</li>
-            <li><strong>Ubicación:</strong> Si la aplicación requiere servicios basados en ubicación, se solicitará permiso
+            <li><strong>Ubicación:</strong> Si la aplicación requiere servicios basados en ubicación, se solicitará
+              permiso
               explícito.</li>
-            <li><strong>Cámara:</strong> Si la aplicación requiere tomar fotografías o videos, se solicitará permiso 
-              explícito y el acceso se limitará al uso dentro de la app, sin almacenamiento externo ni compartición con terceros.</li>
-            <li><strong>Galería:</strong> Si la aplicación requiere seleccionar imágenes o archivos multimedia desde 
-              la galería del dispositivo, se solicitará permiso explícito y el acceso será únicamente de lectura, sin modificar ni eliminar contenido.</li>
-            <li><strong>Almacenamiento interno:</strong> Si la aplicación requiere acceder a archivos internos, se solicitará permiso
+            <li><strong>Cámara:</strong> Si la aplicación requiere tomar fotografías o videos, se solicitará permiso
+              explícito y el acceso se limitará al uso dentro de la app, sin almacenamiento externo ni compartición con
+              terceros.</li>
+            <li><strong>Galería:</strong> Si la aplicación requiere seleccionar imágenes o archivos multimedia desde
+              la galería del dispositivo, se solicitará permiso explícito y el acceso será únicamente de lectura, sin
+              modificar ni eliminar contenido.</li>
+            <li><strong>Almacenamiento interno:</strong> Si la aplicación requiere acceder a archivos internos, se
+              solicitará permiso
               explícito y el acceso será únicamente de lectura, sin alterar ni compartir los archivos.</li>
-            <li><strong>API de Gmail:</strong> Algunas aplicaciones utilizan la API de Gmail de Google exclusivamente para enviar correos electrónicos 
-              transaccionales desde nuestra propia cuenta hacia los usuarios, ademas el único permiso solicitado a través de esta API es gmail.send, 
-              destinado exclusivamente al envío de correos electrónicos transaccionales. No se accede, almacena ni comparte información de las 
+            <li><strong>API de Gmail:</strong> Algunas aplicaciones utilizan la API de Gmail de Google exclusivamente
+              para enviar correos electrónicos
+              transaccionales desde nuestra propia cuenta hacia los usuarios, ademas el único permiso solicitado a
+              través de esta API es gmail.send,
+              destinado exclusivamente al envío de correos electrónicos transaccionales. No se accede, almacena ni
+              comparte información de las
               cuentas de correo de los usuarios.</li>
-            <li><strong>APIs de Geocoding y Maps:</strong> Algunas aplicaciones utilizan servicios de Google Maps y Geocoding únicamente para mostrar 
+            <li><strong>APIs de Geocoding y Maps:</strong> Algunas aplicaciones utilizan servicios de Google Maps y
+              Geocoding únicamente para mostrar
               mapas, calcular ubicaciones o rutas, sin almacenar ni compartir datos de ubicación con terceros.</li>
-            <li><strong>Información de terceros:</strong> Nuestras aplicaciones pueden interactuar con servicios externos 
-              como Google Cloud para autenticación y uso de APIs como Gmail, Maps y Geocoding, AdMob para mostrar publicidad, 
-              Railway como servidor de nuestras APIs remotas y MySQL para almacenamiento de datos. Cada uno de estos servicios 
-              puede recopilar información de acuerdo con sus propias políticas de privacidad.</li>
+            <li><strong>Información de terceros:</strong> Nuestras aplicaciones pueden interactuar con servicios
+              externos como Google Cloud, con el fin de usar sus APIs como: Gmail, Maps y Geocoding en nuestras apps
+              para mejorar sus funcionalidades, ademas se usan servicios como: Cloud Run y Cloud Build para alojar
+              y desplegar nuestras APIs remotas.
+              Ademas en algunos proyectos se podria usar AdMob para mostrar publicidad.
+              Otro servicio externo que utilizamos es Railway como servidor de nuestras bases de datos MySQL.
+              Cada uno de estos servicios puede recopilar información de acuerdo con sus propias políticas de
+              privacidad.</li>
           </ul>
         </div>
 
@@ -114,13 +126,13 @@
 
         <div>
           <h3>Privacidad de menores</h3>
-          <p>Algunas de nuestras aplicaciones están dirigidas a menores de edad con fines educativos y didácticos. 
-            Estas aplicaciones recopilan únicamente información básica de perfil, como nombre de usuario y una imagen 
-            de perfil, sin solicitar ni almacenar datos sensibles (como audio, video, ubicación precisa o información 
-            de contacto). La información se utiliza exclusivamente dentro de la aplicación para personalizar la 
-            experiencia de aprendizaje y no se comparte con terceros. De ser el caso se solicita el consentimiento de 
+          <p>Algunas de nuestras aplicaciones están dirigidas a menores de edad con fines educativos y didácticos.
+            Estas aplicaciones recopilan únicamente información básica de perfil, como nombre de usuario y una imagen
+            de perfil, sin solicitar ni almacenar datos sensibles (como audio, video, ubicación precisa o información
+            de contacto). La información se utiliza exclusivamente dentro de la aplicación para personalizar la
+            experiencia de aprendizaje y no se comparte con terceros. De ser el caso se solicita el consentimiento de
             los padres o tutores cuando sea requerido por la normativa aplicable.
-            Si se detecta la recopilación de información adicional sin el consentimiento correspondiente, esta será 
+            Si se detecta la recopilación de información adicional sin el consentimiento correspondiente, esta será
             eliminada de inmediato.</p>
         </div>
 
@@ -147,20 +159,21 @@
     <p>Puedes contactarme en LinkedIn y Gmail, además puedes consultar mis proyectos realizados en GitHub.</p>
     <div class="footer-icons">
       <a href="mailto:2010guabo@gmail.com" aria-label="Correo">
-        <img src="assets/header-footer/email.png" alt="Email">
+        <img src="../assets/icons/email.svg" alt="Email">
       </a>
       <a href="https://ec.linkedin.com/in/yjot-dev" target="_blank" aria-label="LinkedIn">
-        <img src="assets/header-footer/linkedin.png" alt="LinkedIn">
+        <img src="../assets/icons/linkedin.svg" alt="LinkedIn">
       </a>
       <a href="https://github.com/yjot-dev" target="_blank" aria-label="GitHub">
-        <img src="assets/header-footer/github.png" alt="GitHub">
+        <img src="../assets/icons/github.svg" alt="GitHub">
       </a>
     </div>
   </footer>
 
-  <script type="text/javascript" src="logic.js"></script>
+  <script type="text/javascript" src="../js/logic.js"></script>
   <script type="text/javascript"
-    src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+    </script>
 </body>
 
 </html>

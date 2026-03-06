@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YJOT DEV</title>
+    <link rel="icon" type="image/png" href="../assets/icons/logo.png">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <header class="header">
+        <nav class="topbar">
+            <div class="logo">
+                <img src="../assets/icons/logo.png" alt="Logo">
+                <span>YJOT DEV</span>
+            </div>
+
+            <ul class="menu">
+                <li><a href="../views/privacy.html">Política de privacidad</a></li>
+                <li class="submenu">
+                    <button class="item" aria-expanded="false" aria-controls="submenu-cv">Acerca de mí ▾</button>
+                    <ul class="submenu-item" id="submenu-cv" hidden>
+                        <li><a href="../../index.html">Mi currículo</a></li>
+                        <li><a href="../views/project.html">Mis proyectos</a></li>
+                    </ul>
+                </li>
+                <li class="submenu">
+                    <button class="item" aria-expanded="false" aria-controls="submenu-idioma">Idioma ▾</button>
+                    <ul class="submenu-item" id="submenu-idioma" hidden>
+                        <li>
+                            <button class="item" onclick="doGTranslate('es|es')">
+                                <img src="https://flagcdn.com/48x36/es.png" alt="Bandera de España">
+                                <span>Español</span>
+                            </button>
+                        </li>
+                        <li>
+                            <button class="item" onclick="doGTranslate('es|en')">
+                                <img src="https://flagcdn.com/48x36/gb.png" alt="Bandera de Inglaterra">
+                                <span>Ingles</span>
+                            </button>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="portada">
+            <img src="../assets/apps/ar.png" alt="Imagen de portada">
+        </div>
+    </header>
+
+    <div id="traductor" style="display:none;"></div>
+
+    <main>
+        <h2 class="titulo">ACCIDENT REPORTER</h2>
+
+        <section>
+            <h3 class="subtitulo">Descripción general</h3>
+            <div class="contenedor">
+                <article class="perfil">
+                    <p>
+                        ACCIDENT REPORTER es una aplicación móvil intuitiva diseñada para que los ciudadanos puedan
+                        reportar incidentes de manera rápida y geolocalizada. El objetivo principal es crear un mapa
+                        comunitario de sucesos, permitiendo a los usuarios visualizar y gestionar reportes de forma
+                        sencilla.
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <section>
+            <h3 class="subtitulo">Uso de la aplicación</h3>
+            <div class="contenedor">
+                <article class="perfil">
+                    <p>
+                        El flujo de uso de la aplicación está pensado para ser directo y eficiente, guiando al usuario a
+                        través de los siguientes pasos:
+                    </p>
+                    <ol>
+                        <li>
+                            <strong>Configuración Inicial Sencilla:</strong>
+                            Al iniciar la aplicación por primera vez, el usuario tiene dos opciones claras:
+                            <ul>
+                                <li><strong>Configurar Ubicación:</strong> Para nuevos usuarios, este es el punto de
+                                    partida. Se les permite definir su país, provincia y ciudad. La aplicación utiliza
+                                    esta información para obtener las coordenadas geográficas exactas, personalizando el
+                                    mapa a su área de interés.</li>
+                                <li><strong>Configurar Token:</strong> Para usuarios recurrentes, esta función les
+                                    permite reingresar un token personal único. Esto les devuelve el control sobre los
+                                    incidentes que han reportado previamente, permitiéndoles editarlos o eliminarlos.
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>Visualización en el Mapa Interactivo:</strong>
+                            Una vez configurada la ubicación, el usuario accede a la vista principal: un mapa
+                            interactivo.
+                            En este mapa, se muestran con marcadores rojos todos los incidentes reportados por la
+                            comunidad.
+                            Al seleccionar un marcador, se puede obtener una vista previa con la información básica del
+                            incidente.
+                        </li>
+                        <li>
+                            <strong>Gestión de Incidentes:</strong>
+                            Al hacer clic en la vista previa de un incidente, el sistema ofrece dos posibilidades:
+                            <ul>
+                                <li><strong>Borrar el Reporte:</strong> Si el usuario es el "propietario" original del
+                                    aviso, puede eliminarlo del mapa.</li>
+                                <li><strong>Ver/Editar Detalles:</strong> Esta opción lleva a una pantalla con toda la
+                                    información del incidente. Para la mayoría de los usuarios, la información es de
+                                    solo lectura. Sin embargo, para el propietario del reporte, esta pantalla se
+                                    transforma en un formulario editable, permitiéndole actualizar la información según
+                                    sea necesario.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>Creación de un Nuevo Reporte:</strong>
+                            La característica central de ACCIDENT REPORTER es la facilidad para añadir nuevos
+                            incidentes.
+                            El usuario simplemente debe pulsar en cualquier zona libre del mapa.
+                            Esto abre un formulario de "Agregar Ubicación", donde puede:
+                            <ul>
+                                <li>Seleccionar el tipo de incidente de una lista predefinida (ej: Tráfico, Accidentes,
+                                    Problemas de servicios públicos).</li>
+                                <li>Añadir una descripción detallada del suceso.</li>
+                            </ul>
+                        </li>
+                    </ol>
+                </article>
+            </div>
+        </section>
+
+        <section>
+            <h3 class="subtitulo">Acceso a la aplicación</h3>
+            <div class="contenedor">
+                <div class="tabla-1">
+                    <div class="item-de-tabla">
+                        <a class="icono clickable" href="https://github.com/yjot-dev/Rep-AccidentReporter/tree/v2-test"
+                            target="_blank">
+                            <img class="acceso-apps" src="../assets/icons/github.svg" alt="GitHub">
+                        </a>
+                        <span>Ver código en Github</span>
+                    </div>
+                    <div class="item-de-tabla">
+                        <a class="icono clickable" href="https://youtu.be/zd-f3FNwjHA" target="_blank">
+                            <img class="acceso-apps" src="../assets/icons/video.svg" alt="Video demo">
+                        </a>
+                        <span>Ver video demo en Youtube</span>
+                    </div>
+                    <div class="item-de-tabla">
+                        <a class="icono clickable" href="#" target="_blank">
+                            <img class="acceso-apps" src="../assets/icons/play_store.svg" alt="Play Store">
+                        </a>
+                        <span>Descargar app en Play Store</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <h2>MI CONTACTO</h2>
+        <p>Puedes contactarme en LinkedIn y Gmail, además puedes consultar mis proyectos realizados en GitHub.</p>
+        <div class="footer-icons">
+            <a href="mailto:2010guabo@gmail.com" aria-label="Correo">
+                <img src="../assets/icons/email.svg" alt="Email">
+            </a>
+            <a href="https://ec.linkedin.com/in/yjot-dev" target="_blank" aria-label="LinkedIn">
+                <img src="../assets/icons/linkedin.svg" alt="LinkedIn">
+            </a>
+            <a href="https://github.com/yjot-dev" target="_blank" aria-label="GitHub">
+                <img src="../assets/icons/github.svg" alt="GitHub">
+            </a>
+        </div>
+    </footer>
+
+    <script type="text/javascript" src="../js/logic.js"></script>
+    <script type="text/javascript"
+        src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+        </script>
+</body>
+
+</html>

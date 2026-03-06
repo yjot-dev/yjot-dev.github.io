@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YJOT DEV</title>
+    <link rel="icon" type="image/png" href="../assets/icons/logo.png">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <header class="header">
+        <nav class="topbar">
+            <div class="logo">
+                <img src="../assets/icons/logo.png" alt="Logo">
+                <span>YJOT DEV</span>
+            </div>
+
+            <ul class="menu">
+                <li><a href="../views/privacy.html">Política de privacidad</a></li>
+                <li class="submenu">
+                    <button class="item" aria-expanded="false" aria-controls="submenu-cv">Acerca de mí ▾</button>
+                    <ul class="submenu-item" id="submenu-cv" hidden>
+                        <li><a href="../../index.html">Mi currículo</a></li>
+                        <li><a href="../views/project.html">Mis proyectos</a></li>
+                    </ul>
+                </li>
+                <li class="submenu">
+                    <button class="item" aria-expanded="false" aria-controls="submenu-idioma">Idioma ▾</button>
+                    <ul class="submenu-item" id="submenu-idioma" hidden>
+                        <li>
+                            <button class="item" onclick="doGTranslate('es|es')">
+                                <img src="https://flagcdn.com/48x36/es.png" alt="Bandera de España">
+                                <span>Español</span>
+                            </button>
+                        </li>
+                        <li>
+                            <button class="item" onclick="doGTranslate('es|en')">
+                                <img src="https://flagcdn.com/48x36/gb.png" alt="Bandera de Inglaterra">
+                                <span>Ingles</span>
+                            </button>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="portada">
+            <img src="../assets/apps/cdm.png" alt="Imagen de portada">
+        </div>
+    </header>
+
+    <div id="traductor" style="display:none;"></div>
+
+    <main>
+        <h2 class="titulo">CALCULADORA DE MATERIALES</h2>
+
+        <section>
+            <h3 class="subtitulo">Descripción general</h3>
+            <div class="contenedor">
+                <article class="perfil">
+                    <p>
+                        CdM es una aplicación móvil diseñada para simplificar y agilizar la estimación de insumos en
+                        proyectos de construcción. Su objetivo principal es ofrecer una herramienta directa y eficiente
+                        que permita a los usuarios calcular la cantidad precisa de materiales necesarios para trabajos
+                        específicos, como la construcción de muros o la instalación de pisos.
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <section>
+            <h3 class="subtitulo">Uso de la aplicación</h3>
+            <div class="contenedor">
+                <article class="perfil">
+                    <p>
+                        El flujo de uso de la aplicación ha sido diseñado para ser intuitivo y funcional, guiando al
+                        usuario a través de un proceso claro y sin complicaciones:
+                    </p>
+                    <ol>
+                        <li>
+                            <strong>Navegación Principal:</strong>
+                            Al iniciar la aplicación, el usuario es recibido con un menú claro en la barra de navegación
+                            inferior.
+                            Este menú presenta tres opciones directas que definen las capacidades de la herramienta:
+                            <ul>
+                                <li><strong>Pared:</strong> Permite calcular los materiales para la construcción de
+                                    muros.</li>
+                                <li><strong>Piso:</strong> Facilita el cálculo para la instalación de baldosas.</li>
+                                <li><strong>Tema:</strong> Ofrece personalización de la interfaz.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>Cálculo de Materiales para Paredes:</strong>
+                            En esta sección, el usuario puede estimar la cantidad de ladrillos o bloques requeridos.
+                            Para ello, debe ingresar las dimensiones de la pared (alto y largo) y seleccionar el tipo de
+                            material a utilizar (ladrillo o bloque).
+                            Tras ingresar los datos y presionar el botón de <em>Calcular</em>, la aplicación muestra de
+                            inmediato el número exacto de unidades necesarias para completar el trabajo.
+                        </li>
+                        <li>
+                            <strong>Cálculo de Materiales para Pisos:</strong>
+                            Si el objetivo es instalar un nuevo piso, esta sección optimiza el proceso.
+                            El usuario debe proporcionar el área total de la habitación (en metros cuadrados) y el área
+                            que cubre cada caja de baldosas.
+                            Al hacer clic en <em>Calcular</em>, la aplicación determina la cantidad de cajas de baldosas
+                            que se necesitarán para cubrir toda la superficie.
+                        </li>
+                        <li>
+                            <strong>Personalización de la Interfaz:</strong>
+                            Para mejorar la experiencia de usuario, la sección de <em>Tema</em> permite cambiar la
+                            apariencia visual de la aplicación.
+                            Con un simple clic, es posible alternar entre un tema claro y uno oscuro, adaptándose a las
+                            preferencias del usuario o a las condiciones de iluminación del entorno.
+                        </li>
+                    </ol>
+                </article>
+            </div>
+        </section>
+
+        <section>
+            <h3 class="subtitulo">Acceso a la aplicación</h3>
+            <div class="contenedor">
+                <div class="tabla-1">
+                    <div class="item-de-tabla">
+                        <a class="icono clickable" href="https://github.com/yjot-dev/Rep-CalculadorDeMateriales/tree/v2"
+                            target="_blank">
+                            <img class="acceso-apps" src="../assets/icons/github.svg" alt="GitHub">
+                        </a>
+                        <span>Ver código en Github</span>
+                    </div>
+                    <div class="item-de-tabla">
+                        <a class="icono clickable" href="https://youtu.be/ZXCB118Kv2M" target="_blank">
+                            <img class="acceso-apps" src="../assets/icons/video.svg" alt="Video demo">
+                        </a>
+                        <span>Ver video demo en Youtube</span>
+                    </div>
+                    <div class="item-de-tabla">
+                        <a class="icono clickable" href="#" target="_blank">
+                            <img class="acceso-apps" src="../assets/icons/play_store.svg" alt="Play Store">
+                        </a>
+                        <span>Descargar app en Play Store</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <h2>MI CONTACTO</h2>
+        <p>Puedes contactarme en LinkedIn y Gmail, además puedes consultar mis proyectos realizados en GitHub.</p>
+        <div class="footer-icons">
+            <a href="mailto:2010guabo@gmail.com" aria-label="Correo">
+                <img src="../assets/icons/email.svg" alt="Email">
+            </a>
+            <a href="https://ec.linkedin.com/in/yjot-dev" target="_blank" aria-label="LinkedIn">
+                <img src="../assets/icons/linkedin.svg" alt="LinkedIn">
+            </a>
+            <a href="https://github.com/yjot-dev" target="_blank" aria-label="GitHub">
+                <img src="../assets/icons/github.svg" alt="GitHub">
+            </a>
+        </div>
+    </footer>
+
+    <script type="text/javascript" src="../js/logic.js"></script>
+    <script type="text/javascript"
+        src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+        </script>
+</body>
+
+</html>
