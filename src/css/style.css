@@ -24,7 +24,7 @@ html {
     align-items: flex-start;
     padding: 0;
   }
-  
+
   .logo {
     flex-direction: column;
     align-items: center;
@@ -121,7 +121,7 @@ html {
   gap: 0.5rem;
 }
 
-.menu a, 
+.menu a,
 .menu button {
   font-size: clamp(0.8rem, 2vw, 1rem);
   position: relative;
@@ -213,19 +213,17 @@ html {
 }
 
 .contenedor {
-  padding: 1rem 1.5rem;
-  /* Espaciado lateral moderado */
-  max-width: 50rem;
-  /* Limita el ancho en pantallas grandes */
-  margin: 0 auto;
-  /* Texto centralizado */
+  padding: 1rem 1.5rem; /* Espaciado lateral moderado */
+  max-width: 50rem; /* Limita el ancho en pantallas grandes */
+  margin: 0 auto; /* Texto centralizado */
   text-align: center;
 }
 
 /* Paginas de las apps */
-.item-de-tabla .acceso-apps {
-  width: 5rem;
-  height: 5rem;
+.acceso-apps {
+  width: 4rem;
+  height: 4rem;
+  object-fit: contain;
 }
 
 /* Pagina index (Mi curriculo) */
@@ -272,15 +270,6 @@ html {
   transition: transform 0.3s ease;
 }
 
-.item-de-tabla img, 
-.item-de-tabla svg {
-  padding: 0.4rem;
-  width: 8rem;
-  height: 8rem;
-  object-fit: contain;
-  margin-bottom: 0.5rem;
-}
-
 .item-de-tabla span {
   font-size: 1rem;
   color: #555;
@@ -288,6 +277,12 @@ html {
 
 .item-de-tabla:hover {
   transform: scale(1.05);
+}
+
+.habilidades {
+  width: 8rem;
+  height: 8rem;
+  object-fit: contain;
 }
 
 .icono {
@@ -373,13 +368,12 @@ html {
 /* Pagina privacidad (Politica de privacidad) */
 .privacidad {
   padding: 1rem 1.5rem;
-  max-width: 50rem;
-  /* Limita el ancho en pantallas grandes */
+  max-width: 50rem; /* Limita el ancho en pantallas grandes */
   margin: 0 auto;
 }
 
-.privacidad h3, 
-.privacidad p, 
+.privacidad h3,
+.privacidad p,
 .privacidad li {
   line-height: 1.5;
   text-align: justify;
@@ -466,6 +460,7 @@ html {
 .footer-icons a img {
   width: 2rem;
   height: 2rem;
+  margin-top: 1rem;
   transition: transform 0.3s ease;
 }
 
