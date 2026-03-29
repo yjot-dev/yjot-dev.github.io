@@ -10,46 +10,7 @@
 </head>
 
 <body>
-    <header class="header">
-        <nav class="topbar">
-            <div class="logo">
-                <img src="../assets/icons/logo.png" alt="Logo">
-                <span>YJOT DEV</span>
-            </div>
-
-            <ul class="menu">
-                <li><a href="../views/privacy.html">Política de privacidad</a></li>
-                <li class="submenu">
-                    <button class="item" aria-expanded="false" aria-controls="submenu-cv">Acerca de mí ▾</button>
-                    <ul class="submenu-item" id="submenu-cv" hidden>
-                        <li><a href="../../index.html">Mi currículo</a></li>
-                        <li><a href="../views/project.html">Mis proyectos</a></li>
-                    </ul>
-                </li>
-                <li class="submenu">
-                    <button class="item" aria-expanded="false" aria-controls="submenu-idioma">Idioma ▾</button>
-                    <ul class="submenu-item" id="submenu-idioma" hidden>
-                        <li>
-                            <button class="item" onclick="doGTranslate('es|es')">
-                                <img src="https://flagcdn.com/48x36/es.png" alt="Bandera de España">
-                                <span>Español</span>
-                            </button>
-                        </li>
-                        <li>
-                            <button class="item" onclick="doGTranslate('es|en')">
-                                <img src="https://flagcdn.com/48x36/gb.png" alt="Bandera de Inglaterra">
-                                <span>Ingles</span>
-                            </button>
-                        </li>
-                    </ul>
-                </li>
-            </ul>
-        </nav>
-
-        <div class="portada">
-            <img src="../assets/apps/emp.png" alt="Imagen de portada">
-        </div>
-    </header>
+    <div id="header"></div>
 
     <div id="traductor" style="display:none;"></div>
 
@@ -80,46 +41,72 @@
                     </p>
                     <ol>
                         <li>
-                            <strong>Acceso y Autenticación de Usuario:</strong>
+                            <strong>Acceso y Gestión de Cuenta:</strong>
                             Al iniciar la aplicación, el usuario se encuentra con una pantalla de Login clara y
                             funcional.
                             Desde aquí, tiene tres opciones directas:
                             <ul>
-                                <li><strong>Iniciar Sesión:</strong> Los usuarios existentes pueden acceder rápidamente
-                                    ingresando su nombre de usuario/correo y contraseña.</li>
-                                <li><strong>Registrarse:</strong> Los nuevos usuarios son dirigidos a una vista de
-                                    Registro donde pueden crear su cuenta proporcionando un nombre de usuario, correo
-                                    electrónico y contraseña.</li>
-                                <li><strong>Recuperar Clave:</strong> Si un usuario olvida su contraseña, puede ingresar
-                                    su correo para recibir un código de verificación. Tras validar el código, puede
-                                    establecer una nueva contraseña y recuperar el acceso a su cuenta.</li>
+                                <li><strong>Iniciar Sesión:</strong> Los usuarios existentes pueden acceder a su
+                                    perfil de forma segura ingresando su nombre de usuario o correo electrónico junto
+                                    con su contraseña.
+                                </li>
+                                <li><strong>Registrarse:</strong> Los nuevos usuarios son dirigidos a una
+                                    vista dedicada donde pueden crear su cuenta, proporcionando un nombre de usuario (mínimo 3 caracteres, 
+                                    solo letras minúsculas y mayúsculas), un correo electrónico válido y una contraseña 
+                                    (mínimo 8 caracteres, una letra, un número y no permite caracteres especiales). 
+                                    El usuario ingresa su correo electrónico para recibir un código de verificación único. 
+                                    Tras validar dicho código, se crea la cuenta.
+                                </li>
+                                <li><strong>Recuperar Clave:</strong> En caso de olvido, el sistema ofrece una función
+                                    de recuperación segura. El usuario ingresa su correo electrónico para recibir un
+                                    código de verificación único. Tras validar dicho código, puede establecer una nueva
+                                    contraseña y restaurar el acceso a su cuenta sin complicaciones.
+                                </li>
                             </ul>
                         </li>
                         <li>
-                            <strong>Navegación en el Menú Principal:</strong>
-                            Una vez autenticado, el usuario accede al núcleo de la aplicación, que presenta una barra de
-                            navegación superior con cuatro secciones principales, cada una ofreciendo una funcionalidad
+                            <strong>Navegación en el Menú Principal: </strong>Una vez autenticado, el usuario accede al núcleo de la aplicación, 
+                            que presenta una barra de navegación superior con cuatro secciones principales, cada una ofreciendo una funcionalidad 
                             clave:
                             <ul>
-                                <li><strong>Perfil de Usuario:</strong> Esta es la sección personal del usuario. Aquí
-                                    puede visualizar y actualizar su información (foto de perfil, nombre de usuario,
-                                    correo y contraseña). Para garantizar la seguridad, cualquier actualización o la
-                                    eliminación de la cuenta requiere una verificación mediante un código enviado a su
-                                    correo.</li>
+                                <li>
+                                    <strong>Gestión del Perfil de Usuario:</strong>
+                                    Una vez que el usuario ha iniciado sesión correctamente, es dirigido a una vista de
+                                    Usuario personalizada.
+                                    Esta sección funciona como su panel de control personal y le permite realizar las
+                                    siguientes acciones:
+                                    <ul>
+                                        <li><strong>Actualizar Datos:</strong> El usuario tiene control total para
+                                            modificar su información personal, incluyendo su nombre, correo electrónico, foto de
+                                            perfil y contraseña. Para realizar esta accion, el usuario debera verificar un codigo 
+                                            enviado a su correo electrónico para garantizar la seguridad de su cuenta.
+                                        </li>
+                                        <li><strong>Cerrar Sesión:</strong> Permite salir de la sesión actual de forma
+                                            segura, volviendo a la pantalla de inicio de sesión.
+                                        </li>
+                                        <li><strong>Eliminar Cuenta:</strong> Ofrece la opción de eliminar permanentemente su
+                                            cuenta del sistema si así lo desea. Para realizar esta accion, el usuario debera verificar 
+                                            un codigo enviado a su correo electrónico para garantizar la seguridad de su cuenta.
+                                        </li>
+                                    </ul>
+                                </li>
                                 <li><strong>Módulos Educativos (Unidades):</strong> El corazón del aprendizaje. En esta
                                     vista, el usuario avanza a través de lecciones estructuradas sobre emprendimiento.
                                     El contenido se presenta mediante ejercicios gamificados como verdadero/falso,
                                     completar oraciones y emparejar conceptos, obteniendo un puntaje al finalizar cada
-                                    nivel.</li>
+                                    nivel.
+                                </li>
                                 <li><strong>Proyectos Prácticos:</strong> Para inspirar la acción, esta sección ofrece
                                     una lista de ideas de proyectos de emprendimiento. Cada proyecto incluye información
                                     detallada que sirve como guía y ejemplo para que el usuario pueda empezar a
-                                    conceptualizar su propio negocio.</li>
+                                    conceptualizar su propio negocio.
+                                </li>
                                 <li><strong>Progreso y Feedback (Puntaje):</strong> Esta vista funciona como un panel de
                                     control del rendimiento del usuario. Muestra métricas clave como el puntaje total
                                     acumulado, el tiempo total de estudio en la app y el porcentaje de avance del curso.
                                     Además, incluye una función para que el usuario pueda enviar sus opiniones o
-                                    sugerencias directamente al desarrollador.</li>
+                                    sugerencias directamente al desarrollador.
+                                </li>
                             </ul>
                         </li>
                     </ol>
@@ -148,33 +135,25 @@
                         <a class="icono clickable" href="#" target="_blank">
                             <img class="acceso-apps" src="../assets/icons/play_store.svg" alt="Play Store">
                         </a>
-                        <span>Descargar app en Play Store</span>
+                        <span>Descargar app en Google Play</span>
                     </div>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer class="footer">
-        <h2>MI CONTACTO</h2>
-        <p>Puedes contactarme en LinkedIn y Gmail, además puedes consultar mis proyectos realizados en GitHub.</p>
-        <div class="footer-icons">
-            <a href="mailto:2010guabo@gmail.com" aria-label="Correo">
-                <img src="../assets/icons/email.svg" alt="Email">
-            </a>
-            <a href="https://ec.linkedin.com/in/yjot-dev" target="_blank" aria-label="LinkedIn">
-                <img src="../assets/icons/linkedin.svg" alt="LinkedIn">
-            </a>
-            <a href="https://github.com/yjot-dev" target="_blank" aria-label="GitHub">
-                <img src="../assets/icons/github.svg" alt="GitHub">
-            </a>
-        </div>
-    </footer>
+    <div id="footer"></div>
 
     <script type="text/javascript" src="../js/logic.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            loadInclude("header", "../includes/header.html", { coverImage: "../assets/apps/emp.png" });
+            loadInclude("footer", "../includes/footer.html");
+        });
+    </script>
     <script type="text/javascript"
         src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
-        </script>
+    </script>
 </body>
 
 </html>

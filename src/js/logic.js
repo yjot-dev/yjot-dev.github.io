@@ -40,8 +40,6 @@ function handleScroll() {
   prevScrollPos = currentScrollPos;
 }
 
-window.addEventListener("scroll", handleScroll);
-
 /**
  * Inicializa el comportamiento de un botón que controla un submenú
  * @param {string} buttonSelector - Selector del botón (ej: 'button[aria-controls="submenu-acerca"]')
@@ -94,8 +92,6 @@ function initSubmenuToggle() {
     }
   });
 }
-
-document.addEventListener("DOMContentLoaded", initSubmenuToggle);
 
 /**
  * Inicializa el widget de Google Translate en la página.
@@ -153,12 +149,65 @@ function doGTranslate(lang_pair) {
     var lang = lang_pair.split('|')[1];
     var select = document.querySelector("select.goog-te-combo");
     if (select && select.options) {
-    for (var i = 0; i < select.options.length; i++) {
+      for (var i = 0; i < select.options.length; i++) {
         if (select.options[i].value == lang) {
-        select.selectedIndex = i;
-        select.dispatchEvent(new Event('change'));
-        break;
+          select.selectedIndex = i;
+          select.dispatchEvent(new Event('change'));
+          break;
         }
+      }
     }
+}
+
+/**
+ * Carga dinámicamente un fragmento HTML externo en un contenedor identificado por su `id`.
+ * 
+ * Este método utiliza `fetch` para obtener el contenido de un archivo HTML y lo inserta
+ * dentro del elemento especificado. Además, si el fragmento corresponde a un header:
+ * 
+ * - Permite configurar dinámicamente la imagen de portada (`coverImage`).
+ * - Reinicializa el comportamiento de los submenús (`initSubmenuToggle`).
+ * - Activa el manejo de scroll para mostrar/ocultar la barra de navegación (`handleScroll`).
+ *
+ * @async
+ * @function loadInclude
+ * @param {string} id - El `id` del contenedor en el DOM donde se insertará el fragmento.
+ *                      Ejemplo: `"header"` o `"footer"`.
+ * @param {string} file - Ruta relativa al archivo HTML que se desea incluir.
+ *                        Ejemplo: `"src/includes/header.html"`.
+ * @param {Object} [options={}] - Opciones adicionales para personalizar la inclusión.
+ * @param {string} [options.coverImage] - Ruta de la imagen de portada que se aplicará
+ *                                        si el fragmento corresponde a un header.
+ *
+ * @returns {Promise<void>} No devuelve un valor, pero modifica el DOM insertando el contenido
+ *                          y configurando el comportamiento del header si corresponde.
+ *
+ * @example
+ * // Cargar el header con una portada personalizada
+ * loadInclude("header", "src/includes/header.html", { coverImage: "src/assets/icons/cover.png" });
+ *
+ * @example
+ * // Cargar el footer sin opciones adicionales
+ * loadInclude("footer", "src/includes/footer.html");
+ */
+async function loadInclude(id, file, options = {}) {
+  const element = document.getElementById(id);
+  if (element) {
+    const response = await fetch(file);
+    const html = await response.text();
+    element.innerHTML = html;
+
+    // Usar imagen indicada si se cargó un header y se proporcionó una opción de coverImage
+    if (id === "header" && options.coverImage) {
+      const coverImg = element.querySelector("#cover-image");
+      if (coverImg) {
+        coverImg.src = options.coverImage;
+      }
     }
+    // Reinicializar submenús y scroll si se cargó un header
+    if (id === "header") {
+      initSubmenuToggle()
+      window.addEventListener("scroll", handleScroll);
+    }
+  }
 }

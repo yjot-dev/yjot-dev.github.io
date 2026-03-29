@@ -1,0 +1,40 @@
+<header class="header">
+  <nav class="topbar">
+    <div class="logo">
+      <img src="../assets/icons/logo.png" alt="Logo">
+      <span>YJOT DEV</span>
+    </div>
+
+    <ul class="menu">
+      <li><a href="../views/privacy.html">Política de privacidad</a></li>
+      <li class="submenu">
+        <button class="item" aria-expanded="false" aria-controls="submenu-cv">Acerca de mí ▾</button>
+        <ul class="submenu-item" id="submenu-cv" hidden>
+          <li><a href="../views/curriculum.html">Mi currículo</a></li>
+          <li><a href="../views/project.html">Mis proyectos</a></li>
+        </ul>
+      </li>
+      <li class="submenu">
+        <button class="item" aria-expanded="false" aria-controls="submenu-idioma">Idioma ▾</button>
+        <ul class="submenu-item" id="submenu-idioma" hidden>
+          <li>
+            <button class="item" onclick="doGTranslate('es|es')">
+              <img src="https://flagcdn.com/48x36/es.png" alt="Bandera de España">
+              <span>Español</span>
+            </button>
+          </li>
+          <li>
+            <button class="item" onclick="doGTranslate('es|en')">
+              <img src="https://flagcdn.com/48x36/gb.png" alt="Bandera de Inglaterra">
+              <span>Inglés</span>
+            </button>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+
+  <div class="portada">
+    <img id="cover-image" src="" alt="Imagen de portada">
+  </div>
+</header>

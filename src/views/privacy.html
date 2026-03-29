@@ -10,46 +10,7 @@
 </head>
 
 <body>
-  <header class="header">
-    <nav class="topbar">
-      <div class="logo">
-        <img src="../assets/icons/logo.png" alt="Logo">
-        <span>YJOT DEV</span>
-      </div>
-
-      <ul class="menu">
-        <li><a href="../views/privacy.html">Política de privacidad</a></li>
-        <li class="submenu">
-          <button class="item" aria-expanded="false" aria-controls="submenu-cv">Acerca de mí ▾</button>
-          <ul class="submenu-item" id="submenu-cv" hidden>
-            <li><a href="../../index.html">Mi currículo</a></li>
-            <li><a href="../views/project.html">Mis proyectos</a></li>
-          </ul>
-        </li>
-        <li class="submenu">
-          <button class="item" aria-expanded="false" aria-controls="submenu-idioma">Idioma ▾</button>
-          <ul class="submenu-item" id="submenu-idioma" hidden>
-            <li>
-              <button class="item" onclick="doGTranslate('es|es')">
-                <img src="https://flagcdn.com/48x36/es.png" alt="Bandera de España">
-                <span>Español</span>
-              </button>
-            </li>
-            <li>
-              <button class="item" onclick="doGTranslate('es|en')">
-                <img src="https://flagcdn.com/48x36/gb.png" alt="Bandera de Inglaterra">
-                <span>Ingles</span>
-              </button>
-            </li>
-          </ul>
-        </li>
-      </ul>
-    </nav>
-
-    <div class="portada">
-      <img src="../assets/icons/cover.png" alt="Imagen de portada">
-    </div>
-  </header>
+  <div id="header"></div>
 
   <div id="traductor" style="display:none;"></div>
 
@@ -59,7 +20,7 @@
     <section>
       <h3 class="subtitulo">Última actualización</h3>
       <div class="privacidad">
-        <p><strong>Fecha: </strong>05/03/2026</p>
+        <p><strong>Fecha: </strong>27/03/2026</p>
         <p>Esta política de privacidad describe cómo se recopila, utiliza y protege la información de los usuarios en
           las aplicaciones desarrolladas por YJOT-DEV.</p>
         <div>
@@ -67,13 +28,11 @@
           <p>Dependiendo de la funcionalidad de cada aplicación, podemos recopilar:</p>
           <ul>
             <li><strong>Información personal:</strong> Nombre, correo electrónico o número de teléfono, solo si el
-              usuario
-              la proporciona voluntariamente.</li>
+              usuario la proporciona voluntariamente.</li>
             <li><strong>Datos de uso:</strong> Tipo de dispositivo, sistema operativo, duración de uso, funciones
               utilizadas dentro de la app.</li>
             <li><strong>Ubicación:</strong> Si la aplicación requiere servicios basados en ubicación, se solicitará
-              permiso
-              explícito.</li>
+              permiso explícito.</li>
             <li><strong>Cámara:</strong> Si la aplicación requiere tomar fotografías o videos, se solicitará permiso
               explícito y el acceso se limitará al uso dentro de la app, sin almacenamiento externo ni compartición con
               terceros.</li>
@@ -81,24 +40,22 @@
               la galería del dispositivo, se solicitará permiso explícito y el acceso será únicamente de lectura, sin
               modificar ni eliminar contenido.</li>
             <li><strong>Almacenamiento interno:</strong> Si la aplicación requiere acceder a archivos internos, se
-              solicitará permiso
-              explícito y el acceso será únicamente de lectura, sin alterar ni compartir los archivos.</li>
+              solicitará permiso explícito y el acceso será únicamente de lectura, sin alterar ni compartir los
+              archivos.</li>
             <li><strong>API de Gmail:</strong> Algunas aplicaciones utilizan la API de Gmail de Google exclusivamente
-              para enviar correos electrónicos
-              transaccionales desde nuestra propia cuenta hacia los usuarios, ademas el único permiso solicitado a
-              través de esta API es gmail.send,
-              destinado exclusivamente al envío de correos electrónicos transaccionales. No se accede, almacena ni
-              comparte información de las
-              cuentas de correo de los usuarios.</li>
+              para enviar correos electrónicos transaccionales desde nuestra propia cuenta hacia los usuarios, ademas el
+              único permiso solicitado a través de esta API es gmail.send, destinado exclusivamente al envío de correos
+              electrónicos transaccionales. No se accede, almacena ni comparte información de las cuentas de correo
+              de los usuarios.</li>
             <li><strong>APIs de Geocoding y Maps:</strong> Algunas aplicaciones utilizan servicios de Google Maps y
-              Geocoding únicamente para mostrar
-              mapas, calcular ubicaciones o rutas, sin almacenar ni compartir datos de ubicación con terceros.</li>
+              Geocoding únicamente para mostrar mapas, calcular ubicaciones o rutas, sin almacenar ni compartir
+              datos de ubicación con terceros.</li>
             <li><strong>Información de terceros:</strong> Nuestras aplicaciones pueden interactuar con servicios
               externos como Google Cloud, con el fin de usar sus APIs como: Gmail, Maps y Geocoding en nuestras apps
               para mejorar sus funcionalidades, ademas se usan servicios como: Cloud Run y Cloud Build para alojar
               y desplegar nuestras APIs remotas.
               Ademas en algunos proyectos se podria usar AdMob para mostrar publicidad.
-              Otro servicio externo que utilizamos es Railway como servidor de nuestras bases de datos MySQL.
+              Otro servicio externo que utilizamos es Aiven como servidor de nuestras bases de datos MySQL.
               Cada uno de estos servicios puede recopilar información de acuerdo con sus propias políticas de
               privacidad.</li>
           </ul>
@@ -140,8 +97,10 @@
           <h3>Derechos del usuario</h3>
           <p>Los usuarios tienen derecho a:</p>
           <ul>
-            <li>Solicitar acceso, corrección o eliminación de sus datos personales.</li>
-            <li>Revocar permisos desde la configuración del dispositivo.</li>
+            <li>Solicitar acceso, corrección o eliminación de sus datos personales, para ello debe informarlo
+              con un mensaje a esta dirección de correo electrónico: emprendimiento2020g7h2@gmail.com</li>
+            <li>Revocar permisos desde la configuración de su dispositivo móvil.</li>
+            <li>Eliminar su cuenta desde la aplicación.</li>
           </ul>
         </div>
 
@@ -154,26 +113,18 @@
     </section>
   </main>
 
-  <footer class="footer">
-    <h2>MI CONTACTO</h2>
-    <p>Puedes contactarme en LinkedIn y Gmail, además puedes consultar mis proyectos realizados en GitHub.</p>
-    <div class="footer-icons">
-      <a href="mailto:2010guabo@gmail.com" aria-label="Correo">
-        <img src="../assets/icons/email.svg" alt="Email">
-      </a>
-      <a href="https://ec.linkedin.com/in/yjot-dev" target="_blank" aria-label="LinkedIn">
-        <img src="../assets/icons/linkedin.svg" alt="LinkedIn">
-      </a>
-      <a href="https://github.com/yjot-dev" target="_blank" aria-label="GitHub">
-        <img src="../assets/icons/github.svg" alt="GitHub">
-      </a>
-    </div>
-  </footer>
+  <div id="footer"></div>
 
   <script type="text/javascript" src="../js/logic.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      loadInclude("header", "../includes/header.html", { coverImage: "../assets/icons/cover.png" });
+      loadInclude("footer", "../includes/footer.html");
+    });
+  </script>
   <script type="text/javascript"
     src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
-    </script>
+  </script>
 </body>
 
 </html>
