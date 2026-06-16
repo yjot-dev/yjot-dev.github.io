@@ -116,10 +116,10 @@ function initSubmenuToggle() {
  *   especificado.
  */
 function googleTranslateElementInit() {
-    new google.translate.TranslateElement(
-    {pageLanguage: 'es', includedLanguages: 'es,en'},
+  new google.translate.TranslateElement(
+    { pageLanguage: 'es', includedLanguages: 'es,en' },
     'traductor'
-    );
+  );
 }
 
 /**
@@ -145,18 +145,18 @@ function googleTranslateElementInit() {
  * - Dispara un evento `change` que provoca la traducción automática de la página.
  */
 function doGTranslate(lang_pair) {
-    if (lang_pair.value) lang_pair = lang_pair.value;
-    var lang = lang_pair.split('|')[1];
-    var select = document.querySelector("select.goog-te-combo");
-    if (select && select.options) {
-      for (var i = 0; i < select.options.length; i++) {
-        if (select.options[i].value == lang) {
-          select.selectedIndex = i;
-          select.dispatchEvent(new Event('change'));
-          break;
-        }
+  if (lang_pair.value) lang_pair = lang_pair.value;
+  var lang = lang_pair.split('|')[1];
+  var select = document.querySelector("select.goog-te-combo");
+  if (select && select.options) {
+    for (var i = 0; i < select.options.length; i++) {
+      if (select.options[i].value == lang) {
+        select.selectedIndex = i;
+        select.dispatchEvent(new Event('change'));
+        break;
       }
     }
+  }
 }
 
 /**
@@ -211,3 +211,53 @@ async function loadInclude(id, file, options = {}) {
     }
   }
 }
+
+/**
+ * Calcula los años de experiencia transcurridos desde una fecha inicial.
+ *
+ * La función toma un año, mes y día de inicio y determina cuántos años
+ * han pasado hasta la fecha actual. Si el aniversario del año en curso
+ * aún no ha llegado, resta un año al cálculo.
+ *
+ * @param {number} startYear - Año de inicio (ej. 2022).
+ * @param {number} startMonth - Mes de inicio (1-12, enero = 1).
+ * @param {number} startDay - Día de inicio (1-31).
+ * @returns {number} Número de años de experiencia acumulados.
+ *
+ * @example
+ * // Si hoy es 10 de junio de 2026 y el inicio fue 14 de junio de 2022:
+ * calculateExperience(2022, 6, 14); // Devuelve 3
+ *
+ * @example
+ * // Si hoy es 20 de junio de 2026 y el inicio fue 14 de junio de 2022:
+ * calculateExperience(2022, 6, 14); // Devuelve 4
+ */
+function calculateExperience(startYear, startMonth, startDay) {
+  const startDate = new Date(startYear, startMonth - 1, startDay); // mes base 0
+  const today = new Date();
+
+  let years = today.getFullYear() - startDate.getFullYear();
+
+  // Si aún no ha llegado el aniversario este año, restamos 1
+  const hasAnniversaryPassed =
+    today.getMonth() > startDate.getMonth() ||
+    (today.getMonth() === startDate.getMonth() && today.getDate() >= startDate.getDate());
+
+  if (!hasAnniversaryPassed) {
+    years--;
+  }
+
+  return years;
+}
+
+// Espera a que el DOM esté completamente cargado para calcular y mostrar los años de experiencia
+document.addEventListener("DOMContentLoaded", () => {
+  // Calcula años de experiencia desde el 14 de junio de 2022
+  const yearsExperience = calculateExperience(2022, 6, 14);
+
+  // Actualiza el contenido del div con el número dinámico y el "+"
+  const circle = document.getElementById("experience-circle");
+  if (circle) {
+    circle.textContent = yearsExperience + "+";
+  }
+});
