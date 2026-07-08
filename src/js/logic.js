@@ -258,6 +258,6 @@ document.addEventListener("DOMContentLoaded", () => {
   // Actualiza el contenido del div con el número dinámico y el "+"
   const circle = document.getElementById("experience-circle");
   if (circle) {
-    circle.textContent = yearsExperience + "+";
+    circle.textContent = "+" + yearsExperience;
   }
 });
