@@ -212,21 +212,14 @@ html {
   padding: 1rem;
 }
 
+/* Contenedor principal */
 .contenedor {
   padding: 1rem 1.5rem; /* Espaciado lateral moderado */
   max-width: 50rem; /* Limita el ancho en pantallas grandes */
   margin: 0 auto; /* Texto centralizado */
-  text-align: center;
 }
 
-/* Paginas de las apps */
-.acceso-apps {
-  width: 4rem;
-  height: 4rem;
-  object-fit: contain;
-}
-
-/* Pagina index (Mi curriculo) */
+/* Pagina inicial (Mi curriculo) */
 .perfil {
   display: flex;
   flex-direction: row;
@@ -344,7 +337,6 @@ html {
   transition: background-color 0.30s ease;
 }
 
-/* Graficos de habilidades */
 .circle-bg {
   fill: none;
   stroke: #eee;
@@ -366,21 +358,13 @@ html {
 }
 
 /* Pagina privacidad (Politica de privacidad) */
-.privacidad {
-  padding: 1rem 1.5rem;
-  max-width: 50rem; /* Limita el ancho en pantallas grandes */
-  margin: 0 auto;
-}
-
-.privacidad h3,
-.privacidad p,
-.privacidad li {
+.texto-privacidad {
   line-height: 1.5;
   text-align: justify;
   padding: 0;
 }
 
-.privacidad ul {
+.listas-privacidad {
   list-style: disc;
   padding-left: 1.5rem;
 }
@@ -429,11 +413,24 @@ html {
   object-fit: contain;
 }
 
+/* Paginas de las apps */
+.acceso-apps {
+  width: 4rem;
+  height: 4rem;
+  object-fit: contain;
+}
+
+/* Pagina servicios (Mis servicios) */
+.texto-servicio {
+  line-height: 1.5;
+  text-align: justify;
+}
+
 /* Pie de pagina */
 .footer {
   background-color: #00aaff;
   color: white;
-  padding: 2rem 1.5rem;
+  padding: 1.5rem;
   font-family: 'Arial', sans-serif;
   text-align: center;
   line-height: 1.5;
@@ -445,10 +442,12 @@ html {
   margin: 0 auto;
 }
 
-.footer p {
+.footer-legal {
   font-size: clamp(0.8rem, 2vw, 1rem);
   max-width: 50rem;
   margin: 0 auto;
+  color: white;
+  text-decoration: none;
 }
 
 .footer-icons {
@@ -460,7 +459,6 @@ html {
 .footer-icons a img {
   width: 2rem;
   height: 2rem;
-  margin-top: 1rem;
   transition: transform 0.3s ease;
 }
 

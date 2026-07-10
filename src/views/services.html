@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YJOT DEV</title>
+    <link rel="icon" type="image/png" href="../assets/icons/logo.png">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <div id="header"></div>
+
+    <div id="traductor" style="display:none;"></div>
+
+    <main>
+        <h2 class="titulo">MIS SERVICIOS</h2>
+        <div class="contenedor">
+            <p class="texto-servicio">
+                Puede contactarme en LinkedIn para oportunidades profesionales y en Gmail para proyectos a
+                pedido. Además, le invito a explorar mis proyectos en GitHub, donde encontrará ejemplos de mi trabajo
+                en Android y otras tecnologías.
+            </p>
+        </div>
+        <section>
+            <h3 class="subtitulo">Caracteristicas de los servicios ofrecidos</h3>
+            <div class="contenedor">
+                <div class="tabla-2">
+                    <article class="proyecto">
+                        <img class="proyectos-img" src="../assets/services/service1.png"
+                            alt="Auditoria de apps Android">
+                        <h3>Auditoria de apps Android</h3>
+                        <ul>
+                            <li>Revisión de código desorganizado.</li>
+                            <li>Reporte de especificaciones indicando las fallas de seguridad.</li>
+                            <li>Plan de accion para migrar a Clean Architecture y MVVM.</li>
+                        </ul>
+                        <h3>Precio 150 USD</h3>
+                    </article>
+                    <article class="proyecto">
+                        <img class="proyectos-img" src="../assets/services/service2.png" alt="Paquete MVP">
+                        <h3>Paquete MVP</h3>
+                        <ul>
+                            <li>Diseño de la interfaz de usuario (Incluye login, registro, recuperar cuenta y 4 vistas
+                                más).</li>
+                            <li>Creación de una API con conexion a una base de datos MySQL.</li>
+                            <li>Implementación de Clean Architecture y MVVM (App escalable).</li>
+                            <li>Implementación de pruebas unitarias y de integración.</li>
+                        </ul>
+                        <h3>Precio 1000 USD</h3>
+                    </article>
+                    <article class="proyecto">
+                        <img class="proyectos-img" src="../assets/services/service3.png" alt="Paquete completo">
+                        <h3>Paquete completo</h3>
+                        <ul>
+                            <li>Incluye todo el paquete MVP.</li>
+                            <li>Diseño de la interfaz de usuario (Incluye panel de administración, notificaciones push,
+                                pagos online y las vistas necesarias).</li>
+                            <li>Datos persistentes offline</li>
+                            <li>Implementación de pruebas instrumentales.</li>
+                        </ul>
+                        <h3>Precio desde 2000 USD</h3>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="footer"></div>
+
+    <script type="text/javascript" src="../js/logic.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            loadInclude("header", "../includes/header.html", { coverImage: "../assets/icons/cover.png" });
+            loadInclude("footer", "../includes/footer.html");
+        });
+    </script>
+    <script type="text/javascript"
+        src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+        </script>
+</body>
+
+</html>
