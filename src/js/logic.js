@@ -1,48 +1,98 @@
+// Variable global para almacenar la posición previa del scroll
 let prevScrollPos = window.pageYOffset;
 
 /**
- * Maneja el comportamiento de la barra de navegación superior (.topbar) 
- * en función del desplazamiento (scroll) y el ancho de la ventana.
+ * Actualiza dinámicamente la posición y visibilidad de la barra superior (.topbar)
+ * en función del scroll, el tamaño de la pantalla y la presencia del banner
+ * de Google Translate (iframe.skiptranslate).
  *
- * - En pantallas pequeñas (≤ 590px):
- *   - Si el usuario está en la parte superior de la página y se desplaza hacia arriba,
- *     la barra se muestra (top = "0").
- *   - En cualquier otro caso (desplazamiento hacia abajo o no en la parte superior),
- *     la barra se oculta (top = "-15rem").
+ * - En pantallas grandes (>590px): la barra siempre es visible y se ajusta
+ *   hacia abajo según la altura del banner si está presente.
+ * - En pantallas chicas (≤590px): la barra solo se muestra cuando el scroll
+ *   está en la parte superior (pageYOffset === 0). Al desplazarse hacia abajo,
+ *   se oculta para ahorrar espacio en pantalla.
  *
- * - En pantallas grandes (> 590px):
- *   - La barra permanece siempre visible (top = "0").
+ * El cálculo de desplazamiento se hace en unidades `rem`, dividiendo la altura
+ * del banner en píxeles por el font-size base del documento.
  *
  * Variables externas utilizadas:
- * @property prevScrollPos Variable global que guarda la posición previa del scroll
- *                         para determinar la dirección del desplazamiento.
+ * - `prevScrollPos`: mantiene la posición previa del scroll para referencia.
  *
  * Efectos secundarios:
- * - Modifica dinámicamente el estilo CSS de la barra de navegación (.topbar).
+ * - Modifica dinámicamente las propiedades CSS `top` y `display` de `.topbar`.
  */
-function handleScroll() {
+function updateNavbar() {
   const navbar = document.querySelector(".topbar");
-  let currentScrollPos = window.pageYOffset;
+  const banner = document.querySelector("iframe.skiptranslate");
+  const currentScrollPos = window.pageYOffset;
+
+  // Altura extra si el banner del traductor está visible
+  const baseFontSize = parseFloat(getComputedStyle(document.documentElement).fontSize);
+  const offsetRem = banner && banner.offsetHeight > 0
+    ? banner.offsetHeight / baseFontSize
+    : 0;
 
   if (window.innerWidth <= 590) {
-    if (prevScrollPos > currentScrollPos && window.pageYOffset === 0) {
-      // Inicio → mostrar topbar
-      navbar.style.top = "0";
+    // Pantallas chicas
+    if (window.pageYOffset === 0) {
+      // Solo visible arriba con altura dinamica si el banner está presente
+      navbar.style.top = offsetRem + "rem";
+      navbar.style.display = "flex";
     } else {
-      // Subiendo o bajando → ocultar topbar
-      navbar.style.top = "-15rem";
+      // Oculta durante scroll
+      navbar.style.display = "none";
     }
   } else {
-    // En pantallas grandes, siempre visible
-    navbar.style.top = "0";
+    // Pantallas grandes
+    // Siempre visible con altura dinamica si el banner está presente
+    navbar.style.top = offsetRem + "rem";
+    navbar.style.display = "flex";
   }
 
+  // Ajusta la portada segun el NavBar y Banner
   prevScrollPos = currentScrollPos;
 }
 
+// Observador global: recalcula cuando aparece/cambia el banner
+const observer = new MutationObserver(() => updateNavbar());
+observer.observe(document.body, {
+  childList: true,
+  subtree: true,
+  attributes: true,
+  attributeFilter: ["style", "class"]
+});
+
+// Ajuste inicial al cargar
+window.addEventListener("DOMContentLoaded", updateNavbar);
+
 /**
- * Inicializa el comportamiento de un botón que controla un submenú
- * @param {string} buttonSelector - Selector del botón (ej: 'button[aria-controls="submenu-acerca"]')
+ * Inicializa la lógica de apertura y cierre de submenús accesibles mediante
+ * botones con atributo `aria-controls`. Cada botón controla un submenú
+ * identificado por su ID.
+ *
+ * Comportamiento:
+ * - Estado inicial: todos los submenús se ocultan (`hidden = true`) y los
+ *   botones se marcan con `aria-expanded="false"`.
+ * - Al hacer clic en un botón:
+ *   1. Se evita la propagación del evento (`stopPropagation`).
+ *   2. Se cierran todos los submenús activos y se actualizan sus botones
+ *      (`aria-expanded="false"`).
+ *   3. Se alterna únicamente el submenú asociado al botón clicado:
+ *      - Si estaba cerrado, se abre (`hidden = false`, `aria-expanded="true"`).
+ *      - Si estaba abierto, se cierra.
+ *
+ * Accesibilidad:
+ * - Usa atributos ARIA (`aria-controls`, `aria-expanded`) para mejorar la
+ *   compatibilidad con lectores de pantalla.
+ * - Los submenús se ocultan/mostrar mediante la propiedad `hidden`.
+ *
+ * Efectos secundarios:
+ * - Modifica dinámicamente atributos ARIA y la propiedad `hidden` de los
+ *   elementos de submenú.
+ * - Añade listeners de clic a cada botón encontrado en el DOM.
+ *
+ * No recibe parámetros explícitos; actúa sobre todos los botones con
+ * `aria-controls` presentes en el documento.
  */
 function initSubmenuToggle() {
   const buttons = document.querySelectorAll("button[aria-controls]");
@@ -207,7 +257,7 @@ async function loadInclude(id, file, options = {}) {
     // Reinicializar submenús y scroll si se cargó un header
     if (id === "header") {
       initSubmenuToggle()
-      window.addEventListener("scroll", handleScroll);
+      window.addEventListener("scroll", updateNavbar);
     }
   }
 }

@@ -67,16 +67,12 @@ html {
     background-color: black;
     width: 100%;
     padding: 0;
-    z-index: 10; /*Sobrepone el submenu*/
+    z-index: 10;
   }
 
   .submenu-item li a {
     padding: 0.2rem 0.75rem;
     font-size: 0.7rem;
-  }
-
-  .portada img {
-    padding-top: 2rem;
   }
 }
 
@@ -91,7 +87,6 @@ html {
   width: 100%;
   background-color: black;
   color: white;
-  display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0.5rem 1.5rem;
@@ -109,7 +104,7 @@ html {
   height: 2rem;
 }
 
-.logo span {
+.logo h1 {
   font-size: 1.2rem;
   font-weight: bold;
 }
@@ -176,7 +171,7 @@ html {
 .item {
   display: flex;
   align-items: center;
-  gap: 0.4rem; /* espacio entre icono y texto */
+  gap: 0.4rem;
   background: transparent;
   width: 100%;
   border: none;
@@ -214,9 +209,9 @@ html {
 
 /* Contenedor principal */
 .contenedor {
-  padding: 1rem 1.5rem; /* Espaciado lateral moderado */
-  max-width: 50rem; /* Limita el ancho en pantallas grandes */
-  margin: 0 auto; /* Texto centralizado */
+  padding: 1rem 1.5rem;
+  max-width: 50rem;
+  margin: 0 auto;
 }
 
 /* Pagina inicial (Mi curriculo) */
