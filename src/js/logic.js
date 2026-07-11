@@ -234,7 +234,7 @@ function doGTranslate(lang_pair) {
  *
  * @example
  * // Cargar el header con una portada personalizada
- * loadInclude("header", "src/includes/header.html", { coverImage: "src/assets/icons/cover.png" });
+ * loadInclude("header", "src/includes/header.html", { coverImage: "src/assets/icons/cover.webp" });
  *
  * @example
  * // Cargar el footer sin opciones adicionales
