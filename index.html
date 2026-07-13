@@ -2,11 +2,297 @@
 <html lang="es">
 
 <head>
+  <title>YJOT DEV | INICIO</title>
+  <meta name="description" content="Curriculum de Yasser Ortiz T. alias YJOT DEV, desarrollador Android y fullstack.">
+  <meta name="keywords"
+    content="Yasser Ortiz T., YJOT DEV, desarrollador Android, portafolio, curriculum, Kotlin, Jetpack Compose, Node.js, MySQL, pruebas unitarias, pruebas instrumentales, automatización con IA">
+  <meta name="author" content="Yasser Ortiz T.">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="google-site-verification" content="QeoEOLUSlBvS3KKHV3wkhz_SYNdxLDyg6XMwUZg0DZ8" />
-  <meta http-equiv="refresh" content="0; url=src/views/start.html">
+  <link rel="icon" type="image/webp" href="assets/icons/logo.webp" />
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 
 <body>
+  <div id="traductor" style="display:none;"></div>
+
+  <header class="header">
+    <nav class="topbar">
+      <div class="logo">
+        <img src="assets/icons/logo.webp" alt="Logo">
+        <h1>YJOT DEV</h1>
+      </div>
+
+      <ul class="menu">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="src/projects.html">Proyectos</a></li>
+        <li><a href="src/services.html">Servicios</a></li>
+        <li class="submenu">
+          <button class="item" aria-expanded="false" aria-controls="submenu-idioma">Idioma ▾</button>
+          <ul class="submenu-item" id="submenu-idioma" hidden>
+            <li>
+              <button class="item" onclick="doGTranslate('es|es')">
+                <img src="https://flagcdn.com/48x36/es.png" alt="Bandera de España">
+                <span>Español</span>
+              </button>
+            </li>
+            <li>
+              <button class="item" onclick="doGTranslate('es|en')">
+                <img src="https://flagcdn.com/48x36/gb.png" alt="Bandera de Inglaterra">
+                <span>Inglés</span>
+              </button>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="portada">
+      <img id="cover-image" src="assets/icons/cover.webp" alt="Imagen de portada">
+    </div>
+  </header>
+
+  <main>
+    <h2 class="titulo">ACERCA DE MÍ</h2>
+
+    <section>
+      <h3 class="subtitulo">Hoja de vida</h3>
+      <div class="contenedor">
+        <article class="perfil">
+          <img class="foto-perfil" src="assets/start/profile.webp" alt="Foto de Yasser Ortiz T.">
+          <p>
+            Mi nombre es Yasser Ortiz T. Soy ingeniero de sistemas con varios años de experiencia desarrollando
+            independientemente aplicaciones
+            móviles nativas para Android. Especialista en Kotlin y Jetpack Compose, aplico arquitecturas modernas (MVVM,
+            Clean
+            Architecture), DI con Hilt y pruebas unitarias e instrumentales. Complemento mi stack con Node.js y MySQL,
+            integrando IA en mis flujos de trabajo para optimizar calidad y eficiencia.
+          </p>
+        </article>
+      </div>
+      <div class="contenedor">
+        <div class="tabla-1">
+          <div class="item-de-tabla">
+            <a class="icono clickable" href="assets/start/cv.pdf" target="_blank">CV</a>
+            <span>Desarrollador Android</span>
+          </div>
+          <div class="item-de-tabla">
+            <div class="icono" id="experience-circle">+1</div>
+            <span>Años de experiencia</span>
+          </div>
+          <div class="item-de-tabla">
+            <div class="icono">+10</div>
+            <span>Proyectos realizados</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h3 class="subtitulo">Mis mejores proyectos</h3>
+      <div class="contenedor">
+        <div class="tabla-2">
+          <article class="proyecto">
+            <a href="src/app-emp.html">
+              <img class="proyectos-img" src="assets/projects/Android7.webp" alt="Gamificación sobre emprendimiento">
+            </a>
+            <h3>Gamificación sobre emprendimiento</h3>
+            <ul>
+              <li><strong>Patrón de diseño arquitectónico:</strong> MVVM + Clean Architecture</li>
+              <li><strong>Base de datos:</strong> MySQL</li>
+              <li><strong>API:</strong> Node</li>
+              <li><strong>Inyección de dependencias:</strong> Hilt</li>
+              <li><strong>Descripción:</strong> Esta app está orientada a la educación, cuenta con varios ejercicios
+                sobre
+                la temática de emprendimiento, tiene cuatro modelos de actividades: Verdadero y falso, Elegir respuesta
+                correcta, Escribir respuesta correcta y Lectura comprensiva. Los ejercicios fueron creados según la
+                estrategia de enseñanza y aprendizaje: Gamificación.</li>
+            </ul>
+          </article>
+          <article class="proyecto">
+            <a href="src/app-ar.html">
+              <img class="proyectos-img" src="assets/projects/Android8.webp" alt="Reportero de incidentes">
+            </a>
+            <h3>Accident Reporter</h3>
+            <ul>
+              <li><strong>Patrón de diseño arquitectónico:</strong> MVVM + Clean Architecture</li>
+              <li><strong>Base de datos:</strong> MySQL</li>
+              <li><strong>API:</strong> Node + Google Maps</li>
+              <li><strong>Inyección de dependencias:</strong> Hilt</li>
+              <li><strong>Descripción:</strong> Esta app le permite al usuario elegir una ubicación en el mapa para
+                reportar
+                algún incidente, luego de elegir una ubicación se mostrara un formulario donde debe elegir el tipo de
+                incidente y describir el incidente, luego la app obtiene la fecha actual en su dispositivo y guarda el
+                reporte en una base de datos.</li>
+            </ul>
+          </article>
+        </div>
+        <div class="ver-todos">
+          <a href="src/projects.html" class="btn-proyectos clickable">VER TODOS LOS PROYECTOS</a>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h3 class="subtitulo">Conocimientos técnicos</h3>
+      <div class="contenedor">
+        <div class="tabla-1">
+          <div class="item-de-tabla">
+            <img class="habilidades" src="assets/start/kotlin.webp" alt="Kotlin">
+            <span>Kotlin</span>
+          </div>
+          <div class="item-de-tabla">
+            <img class="habilidades" src="assets/start/jetpack-compose.webp" alt="Jetpack Compose">
+            <span>Jetpack Compose</span>
+          </div>
+          <div class="item-de-tabla">
+            <img class="habilidades" src="assets/start/xml.webp" alt="XML">
+            <span>XML</span>
+          </div>
+          <div class="item-de-tabla">
+            <img class="habilidades" src="assets/start/mysql.webp" alt="MySQL">
+            <span>MySQL</span>
+          </div>
+          <div class="item-de-tabla">
+            <img class="habilidades" src="assets/start/nodejs.webp" alt="Node">
+            <span>Node</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h3 class="subtitulo">Herramientas de desarrollo</h3>
+      <div class="contenedor">
+        <div class="tabla-1">
+          <div class="item-de-tabla">
+            <img class="habilidades" src="assets/start/gemini.webp" alt="Gemini">
+            <span>Gemini</span>
+          </div>
+          <div class="item-de-tabla">
+            <img class="habilidades" src="assets/start/android-studios.webp" alt="Android Studio">
+            <span>Android Studio</span>
+          </div>
+          <div class="item-de-tabla">
+            <img class="habilidades" src="assets/start/visual-studio-code.webp" alt="Visual Studio Code">
+            <span>Visual Studio Code</span>
+          </div>
+          <div class="item-de-tabla">
+            <img class="habilidades" src="assets/start/mysql-workbench.webp" alt="MySQL Workbench">
+            <span>MySQL Workbench</span>
+          </div>
+          <div class="item-de-tabla">
+            <img class="habilidades" src="assets/start/github.webp" alt="GitHub">
+            <span>GitHub</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h3 class="subtitulo">Pruebas y Automatización</h3>
+      <div class="contenedor">
+        <div class="tabla-2">
+          <article class="proyecto">
+            <img class="proyectos-img" src="assets/start/test.webp" alt="Pruebas de software">
+            <h3>Pruebas de software</h3>
+            <ul>
+              <li><strong>Pruebas unitarias:</strong> Cobertura de lógica de negocio en Kotlin.</li>
+              <li><strong>Pruebas instrumentales:</strong> Validación de UI con Espresso y Mock.</li>
+              <li><strong>Pruebas de integración:</strong> Flujo completo entre API Node.js y base de datos MySQL.</li>
+            </ul>
+          </article>
+          <article class="proyecto">
+            <img class="proyectos-img" src="assets/start/automation.webp" alt="Automatización con IA">
+            <h3>Automatización con IA</h3>
+            <ul>
+              <li><strong>IA:</strong> Uso de Gemini para generación de UI/UX y resolución de bugs.
+              </li>
+              <li><strong>MCP:</strong> Implementación de Model Context Protocol en modo local
+                para proporcionar contexto adicional al IDE.
+              </li>
+              <li><strong>AGENTS:</strong> Configuración y mantenimiento del archivo AGENTS.md para
+                definir agentes con reglas, políticas y contexto específico del proyecto.
+              </li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h3 class="subtitulo">Habilidades blandas</h3>
+      <div class="contenedor">
+        <div class="tabla-1">
+          <div class="item-de-tabla">
+            <svg class="habilidades" viewBox="0 0 36 36">
+              <path class="circle-bg"
+                d="M18 2.0845 a 15.9155 15.9155 0 1 1 0 31.831 a 15.9155 15.9155 0 1 1 0 -31.831" />
+              <path class="circle" stroke-dasharray="95, 5"
+                d="M18 2.0845 a 15.9155 15.9155 0 1 1 0 31.831 a 15.9155 15.9155 0 1 1 0 -31.831" />
+              <text x="18" y="20.35" class="percentage">95%</text>
+            </svg>
+            <span>Proactividad</span>
+          </div>
+
+          <div class="item-de-tabla">
+            <svg class="habilidades" viewBox="0 0 36 36">
+              <path class="circle-bg"
+                d="M18 2.0845 a 15.9155 15.9155 0 1 1 0 31.831 a 15.9155 15.9155 0 1 1 0 -31.831" />
+              <path class="circle" stroke-dasharray="95, 5"
+                d="M18 2.0845 a 15.9155 15.9155 0 1 1 0 31.831 a 15.9155 15.9155 0 1 1 0 -31.831" />
+              <text x="18" y="20.35" class="percentage">95%</text>
+            </svg>
+            <span>Comunicación</span>
+          </div>
+
+          <div class="item-de-tabla">
+            <svg class="habilidades" viewBox="0 0 36 36">
+              <path class="circle-bg"
+                d="M18 2.0845 a 15.9155 15.9155 0 1 1 0 31.831 a 15.9155 15.9155 0 1 1 0 -31.831" />
+              <path class="circle" stroke-dasharray="92, 8"
+                d="M18 2.0845 a 15.9155 15.9155 0 1 1 0 31.831 a 15.9155 15.9155 0 1 1 0 -31.831" />
+              <text x="18" y="20.35" class="percentage">92%</text>
+            </svg>
+            <span>Adaptabilidad</span>
+          </div>
+
+          <div class="item-de-tabla">
+            <svg class="habilidades" viewBox="0 0 36 36">
+              <path class="circle-bg"
+                d="M18 2.0845 a 15.9155 15.9155 0 1 1 0 31.831 a 15.9155 15.9155 0 1 1 0 -31.831" />
+              <path class="circle" stroke-dasharray="90, 10"
+                d="M18 2.0845 a 15.9155 15.9155 0 1 1 0 31.831 a 15.9155 15.9155 0 1 1 0 -31.831" />
+              <text x="18" y="20.35" class="percentage">90%</text>
+            </svg>
+            <span>Capacidad resolutiva</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <h2>Contáctate conmigo</h2>
+    <div class="footer-icons">
+      <a href="mailto:2010guabo@gmail.com" aria-label="Correo">
+        <img src="assets/icons/email.svg" alt="Email">
+      </a>
+      <a href="https://ec.linkedin.com/in/yjot-dev" target="_blank" aria-label="LinkedIn">
+        <img src="assets/icons/linkedin.svg" alt="LinkedIn">
+      </a>
+      <a href="https://github.com/yjot-dev" target="_blank" aria-label="GitHub">
+        <img src="assets/icons/github.svg" alt="GitHub">
+      </a>
+    </div>
+    <a class="footer-legal" href="src/privacy.html">Política de privacidad</a>
+  </footer>
+
+  <script type="text/javascript" src="js/main.js"></script>
+  <script type="text/javascript"
+    src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+  </script>
 </body>
 
 </html>

@@ -3,8 +3,10 @@
 
 <head>
   <title>YJOT DEV | POLÍTICA DE PRIVACIDAD</title>
-  <meta name="description" content="Política de privacidad de Yasser Ortiz T. alias YJOT DEV. Información sobre recopilación, uso y protección de datos de usuarios en aplicaciones.">
-  <meta name="keywords" content="Yasser Ortiz T., YJOT DEV, desarrollador Android, portafolio, política de privacidad, datos de usuarios, recopilación de información, uso de datos, protección de datos, aplicaciones móviles">
+  <meta name="description"
+    content="Política de privacidad de Yasser Ortiz T. alias YJOT DEV. Información sobre recopilación, uso y protección de datos de usuarios en aplicaciones.">
+  <meta name="keywords"
+    content="Yasser Ortiz T., YJOT DEV, desarrollador Android, portafolio, política de privacidad, datos de usuarios, recopilación de información, uso de datos, protección de datos, aplicaciones móviles">
   <meta name="author" content="Yasser Ortiz T.">
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -13,7 +15,41 @@
 </head>
 
 <body>
-  <div id="header"></div>
+  <header class="header">
+    <nav class="topbar">
+      <div class="logo">
+        <img src="../assets/icons/logo.webp" alt="Logo">
+        <h1>YJOT DEV</h1>
+      </div>
+
+      <ul class="menu">
+        <li><a href="../index.html">Inicio</a></li>
+        <li><a href="../src/projects.html">Proyectos</a></li>
+        <li><a href="../src/services.html">Servicios</a></li>
+        <li class="submenu">
+          <button class="item" aria-expanded="false" aria-controls="submenu-idioma">Idioma ▾</button>
+          <ul class="submenu-item" id="submenu-idioma" hidden>
+            <li>
+              <button class="item" onclick="doGTranslate('es|es')">
+                <img src="https://flagcdn.com/48x36/es.png" alt="Bandera de España">
+                <span>Español</span>
+              </button>
+            </li>
+            <li>
+              <button class="item" onclick="doGTranslate('es|en')">
+                <img src="https://flagcdn.com/48x36/gb.png" alt="Bandera de Inglaterra">
+                <span>Inglés</span>
+              </button>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="portada">
+      <img id="cover-image" src="../assets/icons/cover.webp" alt="Imagen de portada">
+    </div>
+  </header>
 
   <div id="traductor" style="display:none;"></div>
 
@@ -24,36 +60,46 @@
       <h3 class="subtitulo">Última actualización</h3>
       <div class="contenedor">
         <p class="texto-privacidad"><strong>Fecha: </strong>27/03/2026</p>
-        <p class="texto-privacidad">Esta política de privacidad describe cómo se recopila, utiliza y protege la información de los usuarios en
+        <p class="texto-privacidad">Esta política de privacidad describe cómo se recopila, utiliza y protege la
+          información de los usuarios en
           las aplicaciones desarrolladas por YJOT-DEV.</p>
         <div>
           <h3 class="texto-privacidad">Información que recopilamos</h3>
           <p class="texto-privacidad">Dependiendo de la funcionalidad de cada aplicación, podemos recopilar:</p>
           <ul class="listas-privacidad">
-            <li class="texto-privacidad"><strong>Información personal:</strong> Nombre, correo electrónico o número de teléfono, solo si el
+            <li class="texto-privacidad"><strong>Información personal:</strong> Nombre, correo electrónico o número de
+              teléfono, solo si el
               usuario la proporciona voluntariamente.</li>
-            <li class="texto-privacidad"><strong>Datos de uso:</strong> Tipo de dispositivo, sistema operativo, duración de uso, funciones
+            <li class="texto-privacidad"><strong>Datos de uso:</strong> Tipo de dispositivo, sistema operativo, duración
+              de uso, funciones
               utilizadas dentro de la app.</li>
-            <li class="texto-privacidad"><strong>Ubicación:</strong> Si la aplicación requiere servicios basados en ubicación, se solicitará
+            <li class="texto-privacidad"><strong>Ubicación:</strong> Si la aplicación requiere servicios basados en
+              ubicación, se solicitará
               permiso explícito.</li>
-            <li class="texto-privacidad"><strong>Cámara:</strong> Si la aplicación requiere tomar fotografías o videos, se solicitará permiso
+            <li class="texto-privacidad"><strong>Cámara:</strong> Si la aplicación requiere tomar fotografías o videos,
+              se solicitará permiso
               explícito y el acceso se limitará al uso dentro de la app, sin almacenamiento externo ni compartición con
               terceros.</li>
-            <li class="texto-privacidad"><strong>Galería:</strong> Si la aplicación requiere seleccionar imágenes o archivos multimedia desde
+            <li class="texto-privacidad"><strong>Galería:</strong> Si la aplicación requiere seleccionar imágenes o
+              archivos multimedia desde
               la galería del dispositivo, se solicitará permiso explícito y el acceso será únicamente de lectura, sin
               modificar ni eliminar contenido.</li>
-            <li class="texto-privacidad"><strong>Almacenamiento interno:</strong> Si la aplicación requiere acceder a archivos internos, se
+            <li class="texto-privacidad"><strong>Almacenamiento interno:</strong> Si la aplicación requiere acceder a
+              archivos internos, se
               solicitará permiso explícito y el acceso será únicamente de lectura, sin alterar ni compartir los
               archivos.</li>
-            <li class="texto-privacidad"><strong>API de Gmail:</strong> Algunas aplicaciones utilizan la API de Gmail de Google exclusivamente
+            <li class="texto-privacidad"><strong>API de Gmail:</strong> Algunas aplicaciones utilizan la API de Gmail de
+              Google exclusivamente
               para enviar correos electrónicos transaccionales desde nuestra propia cuenta hacia los usuarios, ademas el
               único permiso solicitado a través de esta API es gmail.send, destinado exclusivamente al envío de correos
               electrónicos transaccionales. No se accede, almacena ni comparte información de las cuentas de correo
               de los usuarios.</li>
-            <li class="texto-privacidad"><strong>APIs de Geocoding y Maps:</strong> Algunas aplicaciones utilizan servicios de Google Maps y
+            <li class="texto-privacidad"><strong>APIs de Geocoding y Maps:</strong> Algunas aplicaciones utilizan
+              servicios de Google Maps y
               Geocoding únicamente para mostrar mapas, calcular ubicaciones o rutas, sin almacenar ni compartir
               datos de ubicación con terceros.</li>
-            <li class="texto-privacidad"><strong>Información de terceros:</strong> Nuestras aplicaciones pueden interactuar con servicios
+            <li class="texto-privacidad"><strong>Información de terceros:</strong> Nuestras aplicaciones pueden
+              interactuar con servicios
               externos como Google Cloud, con el fin de usar sus APIs como: Gmail, Maps y Geocoding en nuestras apps
               para mejorar sus funcionalidades, ademas se usan servicios como: Cloud Run y Cloud Build para alojar
               y desplegar nuestras APIs remotas.
@@ -77,16 +123,19 @@
 
         <div>
           <h3 class="texto-privacidad">Compartir información</h3>
-          <p class="texto-privacidad">No compartimos información personal con terceros, excepto en los siguientes casos:</p>
+          <p class="texto-privacidad">No compartimos información personal con terceros, excepto en los siguientes casos:
+          </p>
           <ul class="listas-privacidad">
-            <li class="texto-privacidad">Con proveedores de servicios que nos ayudan a operar la app (análisis, publicidad).</li>
+            <li class="texto-privacidad">Con proveedores de servicios que nos ayudan a operar la app (análisis,
+              publicidad).</li>
             <li class="texto-privacidad">Cuando sea requerido por ley.</li>
           </ul>
         </div>
 
         <div>
           <h3 class="texto-privacidad">Privacidad de menores</h3>
-          <p class="texto-privacidad">Algunas de nuestras aplicaciones están dirigidas a menores de edad con fines educativos y didácticos.
+          <p class="texto-privacidad">Algunas de nuestras aplicaciones están dirigidas a menores de edad con fines
+            educativos y didácticos.
             Estas aplicaciones recopilan únicamente información básica de perfil, como nombre de usuario y una imagen
             de perfil, sin solicitar ni almacenar datos sensibles (como audio, video, ubicación precisa o información
             de contacto). La información se utiliza exclusivamente dentro de la aplicación para personalizar la
@@ -100,7 +149,8 @@
           <h3 class="texto-privacidad">Derechos del usuario</h3>
           <p class="texto-privacidad">Los usuarios tienen derecho a:</p>
           <ul class="listas-privacidad">
-            <li class="texto-privacidad">Solicitar acceso, corrección o eliminación de sus datos personales, para ello debe informarlo
+            <li class="texto-privacidad">Solicitar acceso, corrección o eliminación de sus datos personales, para ello
+              debe informarlo
               con un mensaje a esta dirección de correo electrónico: emprendimiento2020g7h2@gmail.com</li>
             <li class="texto-privacidad">Revocar permisos desde la configuración de su dispositivo móvil.</li>
             <li class="texto-privacidad">Eliminar su cuenta desde la aplicación.</li>
@@ -109,25 +159,34 @@
 
         <div>
           <h3 class="texto-privacidad">Cambios en esta política</h3>
-          <p class="texto-privacidad">Nos reservamos el derecho de modificar esta Política de Privacidad en cualquier momento. Se notificará a
+          <p class="texto-privacidad">Nos reservamos el derecho de modificar esta Política de Privacidad en cualquier
+            momento. Se notificará a
             los usuarios mediante la app o nuestra página web.</p>
         </div>
       </div>
     </section>
   </main>
 
-  <div id="footer"></div>
+  <footer class="footer">
+    <h2>Contáctate conmigo</h2>
+    <div class="footer-icons">
+      <a href="mailto:2010guabo@gmail.com" aria-label="Correo">
+        <img src="../assets/icons/email.svg" alt="Email">
+      </a>
+      <a href="https://ec.linkedin.com/in/yjot-dev" target="_blank" aria-label="LinkedIn">
+        <img src="../assets/icons/linkedin.svg" alt="LinkedIn">
+      </a>
+      <a href="https://github.com/yjot-dev" target="_blank" aria-label="GitHub">
+        <img src="../assets/icons/github.svg" alt="GitHub">
+      </a>
+    </div>
+    <a class="footer-legal" href="../src/privacy.html">Política de privacidad</a>
+  </footer>
 
-  <script type="text/javascript" src="../js/logic.js"></script>
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      loadInclude("header", "../includes/header.html", { coverImage: "../assets/icons/cover.webp" });
-      loadInclude("footer", "../includes/footer.html");
-    });
-  </script>
+  <script type="text/javascript" src="../js/main.js"></script>
   <script type="text/javascript"
     src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
-  </script>
+    </script>
 </body>
 
 </html>

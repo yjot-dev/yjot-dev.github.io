@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <title>YJOT DEV | SERVICIOS</title>
+  <meta name="description"
+    content="Servicios de Yasser Ortiz T. alias YJOT DEV, auditoria de apps Android, desarrollo de MVP y paquetes completos.">
+  <meta name="keywords"
+    content="Yasser Ortiz T., YJOT DEV, desarrollador Android, portafolio, servicios, auditoria de apps Android, desarrollo de MVP, paquetes completos">
+  <meta name="author" content="Yasser Ortiz T.">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/webp" href="../assets/icons/logo.webp">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+  <header class="header">
+    <nav class="topbar">
+      <div class="logo">
+        <img src="../assets/icons/logo.webp" alt="Logo">
+        <h1>YJOT DEV</h1>
+      </div>
+
+      <ul class="menu">
+        <li><a href="../index.html">Inicio</a></li>
+        <li><a href="../src/projects.html">Proyectos</a></li>
+        <li><a href="../src/services.html">Servicios</a></li>
+        <li class="submenu">
+          <button class="item" aria-expanded="false" aria-controls="submenu-idioma">Idioma ▾</button>
+          <ul class="submenu-item" id="submenu-idioma" hidden>
+            <li>
+              <button class="item" onclick="doGTranslate('es|es')">
+                <img src="https://flagcdn.com/48x36/es.png" alt="Bandera de España">
+                <span>Español</span>
+              </button>
+            </li>
+            <li>
+              <button class="item" onclick="doGTranslate('es|en')">
+                <img src="https://flagcdn.com/48x36/gb.png" alt="Bandera de Inglaterra">
+                <span>Inglés</span>
+              </button>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="portada">
+      <img id="cover-image" src="../assets/icons/cover.webp" alt="Imagen de portada">
+    </div>
+  </header>
+
+  <div id="traductor" style="display:none;"></div>
+
+  <main>
+    <h2 class="titulo">MIS SERVICIOS</h2>
+    <div class="contenedor">
+      <p class="texto-servicio">
+        Puede contactarme en LinkedIn para oportunidades profesionales y en Gmail para proyectos a
+        pedido. Además, le invito a explorar mis proyectos en GitHub, donde encontrará ejemplos de mi trabajo
+        en Android y otras tecnologías.
+      </p>
+    </div>
+    <section>
+      <h3 class="subtitulo">Caracteristicas de los servicios ofrecidos</h3>
+      <div class="contenedor">
+        <div class="tabla-2">
+          <article class="proyecto">
+            <img class="proyectos-img" src="../assets/services/service1.webp" alt="Auditoria de apps Android">
+            <h3>Auditoria de apps Android</h3>
+            <ul>
+              <li>Revisión de código desorganizado.</li>
+              <li>Reporte de especificaciones indicando las fallas de seguridad.</li>
+              <li>Plan de accion para migrar a Clean Architecture y MVVM.</li>
+            </ul>
+            <p><strong>Precio:</strong> 150 USD</p>
+          </article>
+          <article class="proyecto">
+            <img class="proyectos-img" src="../assets/services/service2.webp" alt="Paquete MVP">
+            <h3>Paquete MVP</h3>
+            <ul>
+              <li>Diseño de la interfaz de usuario (Incluye login, registro, recuperar cuenta y 4 vistas
+                más).</li>
+              <li>Creación de una API con conexion a una base de datos MySQL.</li>
+              <li>Implementación de Clean Architecture y MVVM (App escalable).</li>
+              <li>Implementación de pruebas unitarias y de integración.</li>
+            </ul>
+            <p><strong>Precio:</strong> 1000 USD</p>
+          </article>
+          <article class="proyecto">
+            <img class="proyectos-img" src="../assets/services/service3.webp" alt="Paquete completo">
+            <h3>Paquete completo</h3>
+            <ul>
+              <li>Incluye todo el paquete MVP.</li>
+              <li>Diseño de la interfaz de usuario (Incluye panel de administración, notificaciones push,
+                pagos online y las vistas necesarias).</li>
+              <li>Datos persistentes offline</li>
+              <li>Implementación de pruebas instrumentales.</li>
+            </ul>
+            <p><strong>Precio:</strong> desde 2000 USD</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <h2>Contáctate conmigo</h2>
+    <div class="footer-icons">
+      <a href="mailto:2010guabo@gmail.com" aria-label="Correo">
+        <img src="../assets/icons/email.svg" alt="Email">
+      </a>
+      <a href="https://ec.linkedin.com/in/yjot-dev" target="_blank" aria-label="LinkedIn">
+        <img src="../assets/icons/linkedin.svg" alt="LinkedIn">
+      </a>
+      <a href="https://github.com/yjot-dev" target="_blank" aria-label="GitHub">
+        <img src="../assets/icons/github.svg" alt="GitHub">
+      </a>
+    </div>
+    <a class="footer-legal" href="../src/privacy.html">Política de privacidad</a>
+  </footer>
+
+  <script type="text/javascript" src="../js/main.js"></script>
+  <script type="text/javascript"
+    src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+    </script>
+</body>
+
+</html>

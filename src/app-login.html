@@ -10,7 +10,41 @@
 </head>
 
 <body>
-    <div id="header"></div>
+    <header class="header">
+        <nav class="topbar">
+            <div class="logo">
+                <img src="../assets/icons/logo.webp" alt="Logo">
+                <h1>YJOT DEV</h1>
+            </div>
+
+            <ul class="menu">
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="../src/projects.html">Proyectos</a></li>
+                <li><a href="../src/services.html">Servicios</a></li>
+                <li class="submenu">
+                    <button class="item" aria-expanded="false" aria-controls="submenu-idioma">Idioma ▾</button>
+                    <ul class="submenu-item" id="submenu-idioma" hidden>
+                        <li>
+                            <button class="item" onclick="doGTranslate('es|es')">
+                                <img src="https://flagcdn.com/48x36/es.png" alt="Bandera de España">
+                                <span>Español</span>
+                            </button>
+                        </li>
+                        <li>
+                            <button class="item" onclick="doGTranslate('es|en')">
+                                <img src="https://flagcdn.com/48x36/gb.png" alt="Bandera de Inglaterra">
+                                <span>Inglés</span>
+                            </button>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="portada">
+            <img id="cover-image" src="../assets/apps/login.webp" alt="Imagen de portada">
+        </div>
+    </header>
 
     <div id="traductor" style="display:none;"></div>
 
@@ -47,10 +81,11 @@
                                 <li><strong>Iniciar Sesión:</strong> Los usuarios existentes pueden acceder a su
                                     perfil de forma segura ingresando su nombre de usuario o correo electrónico junto
                                     con su contraseña. Actualmente esta app cuenta con dos usuarios, el primero es un
-                                    usuario de pruebas para fines de desarrollo y revision por parte de Google y el 
-                                    segundo es un usuario invitado con permisos limitados para que cualquier persona 
-                                    pueda probar la app sin necesidad de crear una cuenta. Las credenciales del usuario 
-                                    invitado son <strong>usuario:</strong> Invitado y <strong>clave:</strong> Invitado1000
+                                    usuario de pruebas para fines de desarrollo y revision por parte de Google y el
+                                    segundo es un usuario invitado con permisos limitados para que cualquier persona
+                                    pueda probar la app sin necesidad de crear una cuenta. Las credenciales del usuario
+                                    invitado son <strong>usuario:</strong> Invitado y <strong>clave:</strong>
+                                    Invitado1000
                                 </li>
                                 <li><strong>Registrarse:</strong> Los nuevos usuarios son dirigidos a una
                                     vista dedicada donde pueden crear su cuenta, proporcionando un nombre de usuario
@@ -144,15 +179,23 @@
         </section>
     </main>
 
-    <div id="footer"></div>
+    <footer class="footer">
+        <h2>Contáctate conmigo</h2>
+        <div class="footer-icons">
+            <a href="mailto:2010guabo@gmail.com" aria-label="Correo">
+                <img src="../assets/icons/email.svg" alt="Email">
+            </a>
+            <a href="https://ec.linkedin.com/in/yjot-dev" target="_blank" aria-label="LinkedIn">
+                <img src="../assets/icons/linkedin.svg" alt="LinkedIn">
+            </a>
+            <a href="https://github.com/yjot-dev" target="_blank" aria-label="GitHub">
+                <img src="../assets/icons/github.svg" alt="GitHub">
+            </a>
+        </div>
+        <a class="footer-legal" href="../src/privacy.html">Política de privacidad</a>
+    </footer>
 
-    <script type="text/javascript" src="../js/logic.js"></script>
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            loadInclude("header", "../includes/header.html", { coverImage: "../assets/apps/login.webp" });
-            loadInclude("footer", "../includes/footer.html");
-        });
-    </script>
+    <script type="text/javascript" src="../js/main.js"></script>
     <script type="text/javascript"
         src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
         </script>
