@@ -353,13 +353,19 @@ html {
 }
 
 /* Pagina privacidad (Politica de privacidad) */
-.texto-privacidad {
+.privacidad {
+  padding: 1rem 1.5rem;
+  max-width: 50rem;
+  margin: 0 auto;
+}
+
+.privacidad h3, .privacidad p, .privacidad li {
   line-height: 1.5;
   text-align: justify;
   padding: 0;
 }
 
-.listas-privacidad {
+.privacidad ul {
   list-style: disc;
   padding-left: 1.5rem;
 }
@@ -418,6 +424,33 @@ html {
 /* Pagina servicios (Mis servicios) */
 .texto-servicio {
   line-height: 1.5;
+  text-align: justify;
+}
+
+.tarjetas {
+  background-color: #f1efef;
+  padding: 1rem;
+  border-radius: 1.5rem;
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.05);
+}
+
+.tarjetas h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: #333;
+  text-align: center;
+}
+
+.tarjetas ul {
+  list-style: disc;
+  padding-left: 1rem;
+  margin-bottom: 1rem;
+}
+
+.tarjetas li {
+  font-size: 0.95rem;
+  margin-bottom: 0.3rem;
+  color: #444;
   text-align: justify;
 }
 
